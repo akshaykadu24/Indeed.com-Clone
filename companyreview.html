@@ -140,12 +140,13 @@
         let div1=document.createElement("div");
         let div2=document.createElement("div");
         let divb=document.createElement("div");
-        
+        let div=document.createElement("div");
         div1.append(i);
         div2.append(tit,rev);
         diva.append(div1,div2);
         divb.append(sal,que,oj);
-        container.append(diva,divb);
+        div.append(diva,divb);
+        container.append(div);
     });
 }
 function companydetail(data){
