@@ -1,6 +1,9 @@
 body {
   margin: 0px;
 }
+#main {
+  border: 1px solid black;
+}
 #navbar {
   display: flex;
   border: 1px solid black;
@@ -89,9 +92,7 @@ body {
   cursor: pointer;
   background-color: #164081;
 }
-#main {
-  margin: 0px;
-}
+
 #top {
   margin: 0px;
   display: flex;
