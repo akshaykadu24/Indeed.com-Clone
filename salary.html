@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #navbar {} */
+
+        #main {
+            width: 100%;
+            border: 1px solid #edf2f4;
+            height: 300px;
+            display: flex;
+            background-color: #eff7f6;
+
+        }
+
+        #main>#main1 {
+            width: 60%;
+            margin-left: 25px;
+            /* border: 1px solid red; */
+            background-color: #eff7f6;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+
+        }
+
+        #main1>h1 {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 35px;
+        }
+
+        #main1>p {
+            font-size: 16px;
+            font-weight: 400;
+            color: #2d2d2d;
+            line-height: 21px;
+
+        }
+
+        #main>#main2 {
+            width: 40%;
+            /* border: 1px solid red; */
+            /* margin-left: 25px; */
+        }
+
+        img {
+            width: 100%;
+            height: 300px;
+        }
+
+        #salary {
+            /* border: 1px solid black; */
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+        }
+
+        #salary>h1 {
+            margin-left: 25px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        input {
+            margin-left: 25px;
+            width: 15%;
+            height: 25px;
+            border-radius: 10px;
+        }
+
+        #result1 {
+            /* border: 1px solid black; */
+            width: 95%;
+            margin: auto;
+            margin-top: 18px;
+            height: 320px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+           
+        }
+       
+        #result2 {
+            /* border: 1px solid black; */
+            width: 95%;
+            margin: auto;
+            margin-top: 18px;
+            height: 320px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .item11 {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            height: 75%;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+      
+
+        #box {
+            display: flex;
+            justify-content: space-around;
+            margin-top: -20px;
+            align-items: center;
+           
+            /* font-size: 16px;
+            font-weight: 700; */
+
+        }
+
+        #box>#p2 {
+            font-size: 16px;
+            font-weight: 500;
+            color: #4b4b4b;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+        }
+
+        #box1 {
+            height: 50%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        #box1>#p1 {
+            margin-left: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 24px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+        }
+
+        .item11>#p4 {
+            margin-left: 30px;
+            color: blue;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+
+        }
+
+        /* -------------------------------------------------------------------------------- */
+        .item22 {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            height: 100px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+
+        #box2 {
+            display: flex;
+            height: 90%;
+            padding: 5px;
+        }
+
+        #div3 {
+            height: 100%;
+            width: 20%;
+            margin-left: 10px;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+
+        #div3>img {
+            height: 100%;
+            width: 100%;
+        }
+
+        #div4 {
+            margin-left: 15px;
+        }
+
+        #div4>#p5 {
+            font-size: 17px;
+            font-weight: 700;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+        }
+
+        /* -------------------------------------------------------------------------------------------- */
+        #earn {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            width: 100%;
+            height: 250px;
+            display: flex;
+        }
+
+        #earn1>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            ;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+
+        #earn1>p {
+            font-size: 16px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 400;
+            color: #595959;
+            margin-left: 20px;
+        }
+
+
+        #earn2 {
+            width: 40%;
+            margin-left: 10%;
+        }
+
+        #earn2>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #earn1>div {
+            border: 1px solid #0077b6;
+            width: 30%;
+            margin: 20px;
+            font-size: 16px;
+            font-weight: 700;
+            background-color: #0077b6;
+            text-align: center;
+            border-radius: 10px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            ;
+        }
+
+        #earn1>div>p {
+            color: #edf2f4;
+        }
+
+        /* --------------------------------------------------------------------------------- */
+        #help {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            width: 100%;
+            height: 120px;
+            display: flex;
+            margin-top: 40px;
+
+        }
+
+        #help1 {
+            width: 60%;
+        }
+
+        #help1>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+
+        #help2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        #help2>div {
+
+            height: 50%;
+            width: 18%;
+        }
+
+        #help2>div>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* -------------------------------------------------------------------------- */
+        #freq {
+            border: 1px solid  #eff7f6;
+            height: 500px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            background-color: #eff7f6;
+        }
+
+        #freq>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+
+        #freq>div {
+            margin-top: 10px;
+            height: 100%;
+            width: 20%;
+        }
+        .freq1>p{
+            font-size: 14px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 500;
+            margin-bottom: 22px;
+           
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="navbar">
+
+
+    </div>
+
+    <div id="main">
+        <div id="main1">
+            <h1>Find a career you'll love</h1>
+            <p>Explore which careers have the highest job satisfaction, best salaries, and more</p>
+        </div>
+        <div id="main2">
+            <img src="https://d3hbwax96mbv6t.cloudfront.net/title-webapp/_next/static/images/salaries-8d20dc14bdeae8889387e0fb40e0d546.png"
+                alt="error">
+        </div>
+
+    </div>
+
+    <div id="salary">
+        <h1>Browse top paying jobs by industry</h1>
+        <input type="text" id="company" placeholder="Choose an country">
+
+        <div id="result1">
+
+
+        </div>
+
+    </div>
+
+    <div id="salary">
+        <h1>Browse top paying companies by industry</h1>
+        <input type="text" id="company" placeholder="Choose an country">
+
+        <div id="result2">
+
+
+        </div>
+
+    </div>
+
+    <div id="earn">
+        <div id="earn1">
+            <h1>How much should you be earning?</h1>
+            <p>Get an estimated calculation of how much you should be earning and insight into your career options.</p>
+            <div>
+                <p>
+                    Get estimated pay range
+                </p>
+
+            </div>
+
+        </div>
+        <div id="earn2">
+            <img src="https://d3fw5vlhllyvee.cloudfront.net/mosaic-provider-salary-calculator-entries/dist/images/src/components/ResponsiveDefaultEntry/chart_desktop_janish-36baaa.svg"
+                alt="error">
+        </div>
+
+    </div>
+
+    <div id="help">
+        <div id="help1">
+            <h1>Was this page helpful?</h1>
+        </div>
+
+        <div id="help2">
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgZmlsbD0iIzI1NTdBNyIgc3Ryb2tlPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMjQgMjVjMC0zLjMxNC0zLjEzNC02LTctNnMtNyAyLjY4Ni03IDZoMTR6Ii8+PGNpcmNsZSBjeD0iMTEiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxjaXJjbGUgY3g9IjI0IiBjeT0iMTQiIHI9IjMiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+"
+                    alt="error">
+            </div>
+
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgZmlsbD0iIzI1NTdBNyIgc3Ryb2tlPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjE0IiByPSIzIiBmaWxsPSIjRkZGIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMjMuNSAyNS41ODVDMjIuMjk1IDIzLjQ4IDE5Ljk4MiAyMiAxNy4zOCAyMmE2Ljk5OSA2Ljk5OSAwIDAwLTYuMTc1IDMuNzAyIi8+PC9nPjwvc3ZnPg=="
+                    alt="error">
+            </div>
+
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgc3Ryb2tlPSIjMjU1N0E3IiBmaWxsPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjE0IiByPSIzIiBmaWxsPSIjRkZGIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTEgMjQuNWgxMiIvPjwvZz48L3N2Zz4="
+                    alt="error">
+            </div>
+
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgc3Ryb2tlPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9IiMyNTU3QTciLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjE0IiByPSIzIiBmaWxsPSIjRkZGIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTEgMjIuMTE3YzEuMjA3IDIuMTA1IDMuNTIgMy41ODUgNi4xMiAzLjU4NUE2Ljk5OSA2Ljk5OSAwIDAwMjMuMjk2IDIyIi8+PC9nPjwvc3ZnPg=="
+                    alt="error">
+            </div>
+
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgc3Ryb2tlPSIjMjU1N0E3IiBmaWxsPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjE0IiByPSIzIiBmaWxsPSIjRkZGIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMCAyMGMwIDMuMzE0IDMuMTM0IDYgNyA2czctMi42ODYgNy02SDEweiIvPjwvZz48L3N2Zz4="
+                    alt="error">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="freq">
+        <h1>Frequently searched careers</h1>
+        <div class="freq1">
+            <p>Security Guard</p>
+            <p>Software Engineer</p>
+            <p>Accountant</p>
+            <p>Data Entry Clerk</p>
+            <p>Driver</p>
+            <p>Teacher</p>
+            <p>Laboratory Technician</p>
+            <p>Pharmacist</p>
+            <p>High School Teacher</p>
+            <p>Graphic Designer</p>
+            <p>Civil Engineer</p>
+            <p>Computer Operator</p>
+        </div>
+        <div class="freq1">
+            <p>Full Stack Developer</p>
+            <p>Physiotherapist</p>
+            <p>Back Office Executive</p>
+            <p>Assistant Professor</p>
+            <p>CNC Operator</p>
+            <p>Radiologist</p>
+            <p>Medical Representative</p>
+            <p>Engineer</p>
+            <p>Computer Engineer</p>
+            <p>Counselor</p>
+            <p>Electrician</p>
+            <p>Veterinarian</p>
+        </div>
+        <div class="freq1">
+            <p>Data Analyst</p>
+            <p>Web Developer</p>
+            <p>Collector</p>
+            <p>Office Assistant</p>
+            <p>Police Officer</p>
+            <p>Flight Attendant</p>
+            <p>School Teacher</p>
+            <p>Medical Officer</p>
+            <p>Interior Designer</p>
+            <p>Elementary School Teacher</p>
+            <p>Python Developer</p>
+            <p>Housekeeper</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script src="./salary.js"></script>
