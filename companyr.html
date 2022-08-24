@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .single{
+            display: flex;
+        }
+        h3{
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find great places to work</h1>
+    <h3>Get access to millions of company reviews</h3>
+    <div>
+    <input type="text" id="name" placeholder="Company Name">
+    <button id="search" onclick="search()">Search Companies</button>
+    </div>
+    <h2>Popular companies</h2>
+    <div id="container">
+    </div>
+</body>
+</html>
+<script>
+    window.addEventListener("load",()=>{
+        companies();
+    })
+
+    let companies=async()=>{
+    let res=await fetch("https://limitless-wildwood-96623.herokuapp.com/api/companies");
+    let data= await res.json();
+     console.log(data);
+     renderdom(data);
+    }
+
+    let renderdom=(data)=>{
+    let container=document.getElementById("container");
+    data.forEach((el) => {
+        let i=document.createElement("img");
+        i.src=el.logo;
+        let tit=document.createElement("h3");
+        tit.innerText=el.name;
+        let x = Math.floor((Math.random() * 1000));
+        let rev=document.createElement("h5");
+        rev.innerText=`${x}Reviews`;
+        let sal=document.createElement("a");
+        sal.href="https://in.indeed.com/cmp/American-Express/salaries";
+        sal.innerText="Salaries";
+        let que=document.createElement("a");
+        que.href="https://in.indeed.com/cmp/American-Express/salaries";
+        que.innerText="Questions";
+        let oj=document.createElement("a");
+        oj.href="https://in.indeed.com/cmp/American-Express/salaries";
+        oj.innerText="Open Jobs";
+        let diva=document.createElement("div");
+        diva.setAttribute("class","single");
+        let div1=document.createElement("div");
+        let div2=document.createElement("div");
+        let divb=document.createElement("div");
+        div1.append(i);
+        div2.append(tit,rev);
+        diva.append(div1,div2);
+        divb.append(sal,que,oj);
+        container.append(diva,divb);
+    });
+}
+
+</script>
