@@ -82,7 +82,8 @@
   </body>
 </html>
 <script>
-  let button = document.getElementById("signinbutton");
+  let button = document.getElementById("postbutton");
+  localStorage.setItem("signinsatus", true);
   let data = JSON.parse(localStorage.getItem("signinsatus"));
   console.log(button);
   button.onclick = () => {
@@ -93,7 +94,12 @@
       alert("sign in first");
     }
   };
-  button.addEventListener("click", function () {
-    console.log(1);
+  window.addEventListener("scroll", function () {
+    let header = document.getElementById("navbar");
+
+    setTimeout(() => {
+      console.log(1);
+      header.setAttribute("class", "stickyheader");
+    }, 5000);
   });
 </script>

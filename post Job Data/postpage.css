@@ -6,12 +6,19 @@ body {
 }
 #navbar {
   display: flex;
+  width: 100%;
+
   border: 1px solid black;
   height: 12%;
   justify-content: space-between;
   align-items: center;
   justify-items: center;
   background-color: #2d2d2d;
+}
+.stickyheader {
+  position: fixed;
+  z-index: 1000;
+  transform-origin: top;
 }
 #navbar > div {
   display: flex;
@@ -183,7 +190,7 @@ body {
 #stepforjob {
   height: 300px;
   display: flex;
-  margin-top: 70px;
+  margin-top: 20px;
   padding: 50px;
   justify-content: space-evenly;
   gap: 20px;
@@ -217,9 +224,10 @@ body {
   font-weight: 400;
 }
 #lastinfo {
-  margin: 140px 0 100px;
+  margin: 120px 0 100px;
   padding: 100px 35% 100px 100px;
   background-color: #faf9f8;
+  margin-bottom: 0px;
 }
 #tagline2 {
   line-height: 1.25;
