@@ -3,54 +3,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./postpage.css" />
     <title>postJob</title>
-    <style>
-      body {
-        margin: 0px;
-      }
-      #navbar {
-        display: flex;
-        border: 1px solid black;
-        height: 12%;
-        justify-content: space-between;
-        align-items: center;
-        justify-items: center;
-        background-color: #2d2d2d;
-      }
-      #navbar > div {
-        display: flex;
-      }
-      #logo {
-        width: 70%;
-        margin-top: 5px;
-      }
-      #logotag {
-        margin-left: 30px;
-        margin-top: 8px;
-        font-size: 12px;
-        font-family: Noto Sans, Helvetica Neue, Helvetica, Arial,
-          Liberation Sans, Roboto, Noto, sans-serif !important;
-      }
-      #logodiv {
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        height: 100%;
-        width: 150px;
-        display: inline;
-        line-height: 0px;
-        margin: 5px 20px;
-        color: white;
-      }
-      .menu {
-        color: white;
-        position: static;
-      }
-      .menu:hover {
-        border-: ;
-        border-bottom: 2px solid blue;
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <div id="navbar">
@@ -65,11 +20,32 @@
         </div>
         <h2 class="menu">Post a job</h2>
       </div>
-      <div>
+      <div id="lastdiv">
         <h2 class="menu">Help Center</h2>
-        <button>Sign in</button>
+        <button id="signinbutton">Sign in</button>
         <h2 class="menu">Find jobs</h2>
       </div>
+    </div>
+    <div id="main">
+      <div id="top">
+        <div class="infodiv">
+          <h2 id="tagline">Hire the right person for your business</h2>
+          <p id="abouttag">
+            No matter the skills, experience level, or qualifications you’re
+            looking for, you'll find the right people on Indeed.
+          </p>
+          <button id="postbutton">Post a job</button>
+        </div>
+        <div class="infodiv">
+          <img
+            id="referimg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvPc_m36qhaNa6oLCz4YfePf7II2MhhIJ5bJip2SMD2-0CYmo6"
+            alt=""
+          />
+        </div>
+      </div>
+      <div></div>
+      <div></div>
     </div>
   </body>
 </html>
