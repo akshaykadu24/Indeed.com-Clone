@@ -5,62 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./postpage.css" />
     <title>postJob</title>
-    <style>
-      #stepforjob {
-        height: 300px;
-        display: flex;
-        margin-top: 70px;
-        padding: 50px;
-        justify-content: space-evenly;
-        gap: 20px;
-      }
-      .stepsdiv {
-        height: 100%;
-        border: 1px solid #e4e2e0;
-        border-radius: 1rem;
-        padding-bottom: 2rem;
-        padding: 30px;
-        box-sizing: border-box;
-        min-width: 0px;
-        border: 1px solid rgb(228, 226, 224);
-        border-radius: 1rem;
-        padding: 1.8rem;
-        margin: 1rem 1rem 1.5rem;
-      }
-      .numtag {
-        color: #085ff7;
-      }
-      .steps {
-        font-size: 1.6rem;
-        line-height: 1.25;
-        padding-bottom: 12px;
-        padding-top: 20px;
-        color: rgb(45, 45, 45);
-      }
-      #detailsteps {
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-      }
-      #lastinfo {
-        margin: 140px 0 100px;
-        padding: 100px 35% 100px 100px;
-        background-color: #faf9f8;
-      }
-      #tagline2 {
-        line-height: 1.25;
-
-        font-size: 2.85rem;
-        color: #2d2d2d;
-        letter-spacing: -0.12px;
-        font-family: Noto Sans, Helvetica Neue, Helvetica, Arial,
-          Liberation Sans, Roboto, Noto, sans-serif !important;
-      }
-      #lasttext {
-        font-family: Noto Sans, Helvetica Neue, Helvetica, Arial,
-          Liberation Sans, Roboto, Noto, sans-serif !important;
-      }
-    </style>
   </head>
   <body>
     <div id="navbar">
@@ -111,7 +55,7 @@
 
         <div class="stepsdiv">
           <h2 class="numtag">2</h2>
-          <h3 class="steps">Build your job postt</h3>
+          <h3 class="steps">Build your job post</h3>
           <p class="detailsteps">
             Then just add a title, description, and location to your job post,
             and you're ready to go.
@@ -137,3 +81,19 @@
     </div>
   </body>
 </html>
+<script>
+  let button = document.getElementById("signinbutton");
+  let data = JSON.parse(localStorage.getItem("signinsatus"));
+  console.log(button);
+  button.onclick = () => {
+    console.log(1);
+    if (data == true) {
+      window.location.href = "addJobData.html";
+    } else {
+      alert("sign in first");
+    }
+  };
+  button.addEventListener("click", function () {
+    console.log(1);
+  });
+</script>
