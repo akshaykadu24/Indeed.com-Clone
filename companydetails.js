@@ -25,7 +25,7 @@ let company=()=>{
     titn.innerText=`> ${compdata.company}`;
     let x = Math.floor((Math.random() * 1000));
     let rev=document.createElement("h5");
-    rev.innerText=`${compdata.rating}Rating ${x}Reviews`;
+    rev.innerText=`${compdata.rating}⭐ ${x}Reviews`;
     let diva=document.createElement("div");
     let div1=document.createElement("div");
     let div2=document.createElement("div");
@@ -59,7 +59,7 @@ let company=()=>{
         tit.innerText=el.company;
         let x = Math.floor((Math.random() * 1000));
         let rev=document.createElement("h5");
-        rev.innerText=`${el.rating}Rating ${x}Reviews`;
+        rev.innerText=`${el.rating}⭐ ${x}Reviews`;
         let vc=document.createElement("button");
         vc.innerText="View Company";
         vc.onclick=()=>{
@@ -69,10 +69,31 @@ let company=()=>{
 
         let div1=document.createElement("div");
         div1.setAttribute("class","company1");
-    
-        div1.append(ind,i,tit,rev,vc)
-        sujjest.append(div1);
-            }
+        let div2=document.createElement("div");
+        let div3=document.createElement("div");
+        div1.append(ind,i,tit,rev)
+        div2.append(vc);
+        div3.append(div1,div2)
+        sujjest.append(div3);
+        let jobs=document.getElementById("jobs");
+            let job=document.createElement("h3");
+            job.innerText=el.Title;
+            let type=document.createElement("h5");
+            type.innerText=el.JobType;
+            let ct=document.createElement("h6");
+            ct.innerText=el.city;
+            let vj=document.createElement("button");
+            vj.innerText="View Job";
+            let div4=document.createElement("div");
+            let div5=document.createElement("div");
+            let div6=document.createElement("div");
+            div4.append(type,job,ct);
+            div5.append(vj);
+            div6.append(div4,div5);
+            jobs.append(div6);
+            
+        }
+        
     })
 
 
