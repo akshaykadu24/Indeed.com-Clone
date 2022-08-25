@@ -124,10 +124,45 @@
         <div id="selecttype">
           <h3>Ready for the next step?</h3>
           <p>Create an account for tools to help you</p>
-          <button>job seeker</button>
-          <button>Employed</button>
+          <button id="job_seeker">job seeker</button>
+          <button id="Employed">Employed</button>
         </div>
       </div>
     </div>
   </body>
 </html>
+<script>
+  let but1 = document.getElementById("job_seeker");
+  but1.onclick = () => {
+    localStorage.setItem("Athorised", JSON.stringify("jobSeeker"));
+    localStorage.setItem("signinsatus", true);
+    window.location.href = "postData.html";
+  };
+  let but2 = document.getElementById("Employed");
+  but2.onclick = () => {
+    localStorage.setItem("Athorised", JSON.stringify("Employed"));
+    localStorage.setItem("signinsatus", true);
+    getdata("Employed");
+  };
+  let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
+  let getdata = async (name) => {
+    let res = await fetch(url);
+    res = await res.json();
+    updatedata(res[res.length - 1].id, name);
+  };
+  let updatedata = async (id, name) => {
+    data = { Athorised: name };
+    let res = await fetch(
+      `https://pacific-refuge-88537.herokuapp.com/api/signup/${id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(data),
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
+
+    window.location.href = "postData.html";
+  };
+</script>

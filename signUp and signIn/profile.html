@@ -1,0 +1,159 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #profile {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: #F3F2F1;
+      }
+      #innerprofile {
+        width: 700px;
+        background-color: fff;
+        padding: 100px 100px 30px 100px;
+        
+      }
+      
+      .info {
+        margin: 0px;
+        color: rgb(45, 45, 45);
+        font-weight: 700;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      .details {
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-weight: inherit;
+        color: rgb(89, 89, 89);
+        font-size: inherit;
+        line-height: inherit;
+      }
+      .changebutton {
+        box-sizing: border-box;
+        background: none rgb(255, 255, 255);
+        appearance: none;
+        text-align: left;
+        text-decoration: none;
+        border: 1px solid rgb(212, 210, 208);
+        cursor: pointer;
+        user-select: none;
+
+        align-items: center;
+
+        justify-content: center;
+        position: relative;
+        margin: 0px;
+        padding: 0.5625rem 2rem;
+        line-height: 1.5;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        display: inline-flex;
+        color: rgb(37, 87, 167);
+      }
+      .innerdiv {
+        border-top:1px solid #E4E2E0 ;
+        padding-top: 15px;
+        
+        box-sizing: border-box;
+        margin: 0px 0px 1.5rem;
+        min-width: 0px;
+        display: flex;
+
+        justify-content: space-between;
+        margin-bottom: 10px;
+        align-items: center;
+      }#lastinndiv{
+        border-bottom:1px solid #E4E2E0 ;
+        padding-bottom: 20px;
+
+      }#dotpass{
+        font-size: 40px;
+        padding: 0px;
+        margin: 0px;
+        margin-top: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="profile">
+        <div id="innerprofile">
+         
+          <div class="innerdiv">
+            <div>
+              <h2 class="info">Account type:</h2>
+              <p class="details">Job seeker</p>
+            </div>
+            <button id="accounttype" class="changebutton">Change account type</button>
+          </div>
+          <div class="innerdiv">
+            <div>
+              <h2 class="info">Email</h2>
+              <p class="details">jadhavsuraj4567@qdwd</p>
+            </div>
+            <button id="email" class="changebutton">Change email</button>
+          </div>
+          <div class="innerdiv">
+            <div>
+              <h2 class="info">Password</h2>
+              <p id="dotpass" class="details">......</p>
+            </div>
+            <button class="changebutton">Change password</button>
+          </div>
+          <div class="innerdiv">
+            <div>
+              <h2 class="info">Phone number</h2>
+              <p class="details">none</p>
+            </div>
+            <button class="changebutton">Add phone</button>
+          </div>
+          <div class="innerdiv">
+            <div>
+              <h2 class="info">Third-party applications</h2>
+              <p class="details">
+                No third-party applications have access to your account
+              </p>
+            </div>
+            
+          </div>
+          <div class="innerdiv" id="lastinndiv">
+            <div>
+              <h2 class="info">jadhavsuraj4567@qdwd</h2>
+              
+            </div>
+            <button class="changebutton">Sign out</button>
+          </div>
+          
+          
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+    let acountType=document.getElementById('accounttype');
+    acountType.onclick=()=>{
+        window.location.href="signin.html"
+    }
+    let email=document.getElementById('email');
+    email.onclick=()=>{
+        let mail=window.prompt('enter email')
+    }
+</script>

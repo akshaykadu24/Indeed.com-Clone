@@ -84,14 +84,15 @@
 <script>
   let button = document.getElementById("postbutton");
 
-  let data = JSON.parse(localStorage.getItem("signinsatus"));
+  let data = JSON.parse(localStorage.getItem("Athorised"));
   console.log(button);
   button.onclick = () => {
     console.log(1);
-    if (data == true) {
+    if (data == "Employed") {
       window.location.href = "addJobData.html";
     } else {
-      alert("sign in first");
+      alert("Your are not Athorised");
+      window.location.href = "findJob.html";
     }
   };
   window.addEventListener("scroll", function () {
