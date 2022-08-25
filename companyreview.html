@@ -20,6 +20,30 @@
         }
         .single{
             display: flex;
+
+        }
+        .single>div:nth-child(1)>img{
+            border-radius: 8px;
+            width: 48px;
+            height: 48px;
+        }
+        .single>div:nth-child(2)>h3{
+            font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+            color: #2d2d2d; 
+            font-size: 16px;
+            margin-left: 16px;
+        }
+        #container>div>div:nth-child(2){
+            border: 1px solid red;
+            justify-content: space-evenly;
+        }
+        #container>div>div:nth-child(2)>a{
+            font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+            color: #595959;
+            font-size: 14px;
+            text-decoration: none;
+            margin-right: 30px;
+            margin-left: 5px;
         }
         h3{
             margin-top: 0px;
@@ -34,22 +58,6 @@
         #rating>img{
             width: 78.31px;
             height: 44.26px;
-        }
-        #rating_bar{
-	    width:100px;
-	    height:100px;
-	    margin: 4px 35px !important;    
-        display:flex;
-        }
-
-        #rating_bar > span:before{
-	    content:'★';
-        color: #c7c5c5;
-	    cursor:pointer;
-        font-size:3em;
-	    }
-        #rating_bar > span:hover:before {
-        color: #4bce32;
         }
         h1{
         font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
@@ -71,15 +79,62 @@
         font-weight: 700;
         font-size: 28px;
         }
+        #searchcomp>input{
+            width: 664px;
+            height: 42px;
+            border-radius: 8px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: start;
+            appearance: auto;
+            border: 1px solid #2D2D2D;
+        }
+        #searchcomp>button{
+            width: 288px;
+            height: 44px;
+            border-radius: 8px;
+            border: 1px solid #2557A7;
+            background-color: #2557A7;
+            font-size: 16px;
+            font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+            color: #FFF;
+        }
+        .rating > span:hover:before {
+            content: "\2605";
+            position: absolute;
+        }
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+        .rating > span:hover:before,
+        .rating > span:hover ~ span:before {
+            content: "\2605";
+            position: absolute;
+        }
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+        }
+        .rating > span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+        }
+        .rating > span:hover:before,
+        .rating > span:hover ~ span:before {
+            content: "\2605";
+            position: absolute;
+        }
     </style>
 </head>
 <body>
     <div id="main">
         <h1>Find great places to work</h1>
     <h3>Get access to millions of company reviews</h3>
-    <div>
+    <div id="searchcomp">
     <input type="text" id="name" placeholder="Company Name">
-    <button id="search" onclick="search()">Search Companies</button>
+    <button id="search" onclick="searchcomp()">Find Companies</button>
     </div>
     <h3 style="font-size: 16px;"><a href="">Do you want to search for salaries?</a></h3>
     <h2>Popular companies</h2>
@@ -90,12 +145,12 @@
     <div id="rating">
         <img src="https://musicsorbonline.com/wp-content/uploads/2013/12/customer-reviews-icon-250x2501.png" alt="">
         <h2>Rate your recent company:</h2>
-        <div id="rating_bar">
-            <span id="rate_1"></span>
-            <span id="rate_2"></span>
-            <span id="rate_3"></span>
-            <span id="rate_4"></span>
-            <span id="rate_5"></span>
+        <div class="rating">
+            <span id="☆">☆</span>
+            <span id="☆">☆</span>
+            <span id="☆">☆</span>
+            <span id="☆">☆</span>
+            <span id="☆">☆</span>
         </div>
     </div>
     </div>
@@ -110,6 +165,8 @@
     let res=await fetch("https://limitless-wildwood-96623.herokuapp.com/api/companies");
     let data= await res.json();
      console.log(data);
+     localStorage.setItem("data",JSON.stringify(data));
+     let alldata=JSON.parse(localStorage.getItem("data"))||[];
      renderdom(data);
     }
 
@@ -149,6 +206,7 @@
         container.append(div);
     });
 }
+
 function companydetail(data){
     localStorage.setItem("comp",JSON.stringify(data));
     let compdata=JSON.parse(localStorage.getItem("comp"))||[];
