@@ -1,0 +1,159 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main{
+            width: 960px;
+            height: 1235px;
+            display: block;
+            margin: auto;
+            margin-top: 75px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: space-evenly;
+            margin: auto;
+        }
+        .single{
+            display: flex;
+        }
+        h3{
+            margin-top: 0px;
+        }
+        #rating{
+            background-color: #f5fbf9;
+            display: flex;
+            width: 960px;
+            height: 100px;
+            margin: auto;
+        }
+        #rating>img{
+            width: 78.31px;
+            height: 44.26px;
+        }
+        #rating_bar{
+	    width:100px;
+	    height:100px;
+	    margin: 4px 35px !important;    
+        display:flex;
+        }
+
+        #rating_bar > span:before{
+	    content:'★';
+        color: #c7c5c5;
+	    cursor:pointer;
+        font-size:3em;
+	    }
+        #rating_bar > span:hover:before {
+        color: #4bce32;
+        }
+        h1{
+        font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+        color: #2d2d2d;
+        font-weight: 700;
+        font-size: 44px;
+        margin-bottom: 0px;
+        }
+        h1~h3{
+            font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+            color: #595959;
+            font-weight: 400;
+            font-size: 20px;
+            margin-top: 24px;
+        }
+        h2{
+        font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+        color: #2d2d2d;
+        font-weight: 700;
+        font-size: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Find great places to work</h1>
+    <h3>Get access to millions of company reviews</h3>
+    <div>
+    <input type="text" id="name" placeholder="Company Name">
+    <button id="search" onclick="search()">Search Companies</button>
+    </div>
+    <h3 style="font-size: 16px;"><a href="">Do you want to search for salaries?</a></h3>
+    <h2>Popular companies</h2>
+    <div id="container">
+    </div>
+    <h2>Compare working at</h2>
+    <div></div>
+    <div id="rating">
+        <img src="https://musicsorbonline.com/wp-content/uploads/2013/12/customer-reviews-icon-250x2501.png" alt="">
+        <h2>Rate your recent company:</h2>
+        <div id="rating_bar">
+            <span id="rate_1"></span>
+            <span id="rate_2"></span>
+            <span id="rate_3"></span>
+            <span id="rate_4"></span>
+            <span id="rate_5"></span>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    window.addEventListener("load",()=>{
+        companies();
+    })
+
+    let companies=async()=>{
+    let res=await fetch("https://limitless-wildwood-96623.herokuapp.com/api/companies");
+    let data= await res.json();
+     console.log(data);
+     renderdom(data);
+    }
+
+    let renderdom=(data)=>{
+    let container=document.getElementById("container");
+    data.forEach((el) => {
+        let i=document.createElement("img");
+        i.src=el.logo;
+        let tit=document.createElement("h3");
+        tit.innerText=el.name;
+        tit.onclick=()=>{
+            companydetail(el);
+        }
+        let x = Math.floor((Math.random() * 1000));
+        let rev=document.createElement("h5");
+        rev.innerText=`${x}Reviews`;
+        let sal=document.createElement("a");
+        sal.href="https://in.indeed.com/cmp/American-Express/salaries";
+        sal.innerText="Salaries";
+        let que=document.createElement("a");
+        que.href="https://in.indeed.com/cmp/American-Express/salaries";
+        que.innerText="Questions";
+        let oj=document.createElement("a");
+        oj.href="https://in.indeed.com/cmp/American-Express/salaries";
+        oj.innerText="Open Jobs";
+        let diva=document.createElement("div");
+        diva.setAttribute("class","single");
+        let div1=document.createElement("div");
+        let div2=document.createElement("div");
+        let divb=document.createElement("div");
+        let div=document.createElement("div");
+        div1.append(i);
+        div2.append(tit,rev);
+        diva.append(div1,div2);
+        divb.append(sal,que,oj);
+        div.append(diva,divb);
+        container.append(div);
+    });
+}
+function companydetail(data){
+    localStorage.setItem("comp",JSON.stringify(data));
+    let compdata=JSON.parse(localStorage.getItem("comp"))||[];
+    console.log(compdata);
+    window.location.href="/companydetails.html";
+}
+
+</script>
