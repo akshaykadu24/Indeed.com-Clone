@@ -59,7 +59,7 @@ let company=()=>{
         tit.innerText=el.company;
         let x = Math.floor((Math.random() * 1000));
         let rev=document.createElement("h5");
-        rev.innerText=`${el.rating}⭐ ${x}Reviews`;
+        rev.innerText=`${el.rating}⭐ ${x} Reviews`;
         let vc=document.createElement("button");
         vc.innerText="View Company";
         vc.onclick=()=>{
