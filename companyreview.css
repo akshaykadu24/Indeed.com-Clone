@@ -10,6 +10,18 @@
     grid-template-columns: repeat(3,1fr);
     justify-content: space-evenly;
     margin: auto;
+    column-gap: 10px;
+    row-gap: 50px;
+}
+#container>div>div:first-child{
+    height: 70%;
+}
+#revi{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    color: #2D2D2D;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 400    ;
 }
 .single{
     display: flex;
@@ -23,11 +35,11 @@
 .single>div:nth-child(2)>h3{
     font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
     color: #2d2d2d; 
-    font-size: 16px;
+    font-size: 15px;
     margin-left: 16px;
 }
 #container>div>div:nth-child(2){
-    border: 1px solid red;
+
     justify-content: space-evenly;
 }
 #container>div>div:nth-child(2)>a{
