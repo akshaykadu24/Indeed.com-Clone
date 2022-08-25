@@ -18,6 +18,10 @@
     margin: auto;
     width: 960px;
 }
+#brief{
+    display: flex;
+    justify-content: space-evenly;
+}
 #companyhead{
     display: flex;
     
@@ -93,6 +97,27 @@
 h3{
     margin-top: 0px;
 }
+#middle{
+    margin-bottom: 50px;
+}
+#middle>h2{
+    font-weight: 700;
+    font-family: "Noto Sans","Helvetica Neue","Helvetica","Arial","Liberation Sans","Roboto","Noto",sans-serif;
+    font-size: 28px;
+    color: #2D2D2D;
+}
+#jobs{
+    border: 1px solid red;
+    height: 340px;
+    width: 1100px;
+    margin-left: -70px;
+    border-radius: 12px;
+    background-color: #f3f2f1;
+    display: flex;
+}
+jobs>div{
+    border: 1px solid blue;
+}
 #insights{
     display: flex;
     width: 960px;
@@ -120,10 +145,19 @@ h3{
     width: 32px;
     height: 32px;
 }
+
 #location{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 16px;
+    margin-bottom: 20px;
+}
+#sil{
+    color: #2D2D2D;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    /* font-weight: inherit; */
 }
 #location>div{
     box-shadow: 0 0.125rem 0.25rem rgb(45 45 45 / 12%), 0 0.0625rem 0.1875rem rgb(45 45 45 / 16%), 0 0 0.125rem rgb(45 45 45 / 20%);
@@ -138,30 +172,110 @@ h3{
 }
 #sujjest{
     display: flex;
+    width: 960px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 10px;
 }
-#sujjest>div{
+#jobs>div{
     box-shadow: 0 0.125rem 0.25rem rgb(45 45 45 / 12%), 0 0.0625rem 0.1875rem rgb(45 45 45 / 16%), 0 0 0.125rem rgb(45 45 45 / 20%);
-    border-radius: 8px;
-    padding-left: 5px;
-    align-items: center;
     background-color: #fff;
     border: 1px solid #d4d2d0;
     border-radius: 0.5rem;
     box-sizing: border-box;
+    border-radius: 8px;
+    padding-left: 10px;
+    margin-right: 13px;
     width: 236px;
     height: 300px;
-    justify-content: center;
+    display: block;
+    margin: auto;
+
 }
-#sujjest>div>img{
+#jobs>div>div:first-child>h3{
+    margin-top: 10px;
+    color: #2D2D2D;
+    font-size: 17px;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+}
+#jobs>div>div:first-child>h5{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 12px;
+    color: #595959;
+}
+#jobs>div>div:first-child>h6{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 12px;
+    color: #595959;
+}
+#sujjest>div{
+    box-shadow: 0 0.125rem 0.25rem rgb(45 45 45 / 12%), 0 0.0625rem 0.1875rem rgb(45 45 45 / 16%), 0 0 0.125rem rgb(45 45 45 / 20%);
+    background-color: #fff;
+    border: 1px solid #d4d2d0;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-left: 5px;
+    margin-right: 13px;
+    width: 236px;
+    height: 300px;
+    display: block;
+}
+#sujjest>div>div:first-child>h3{
+    margin-top: 10px;
+    color: #2D2D2D;
+    font-size: 17px;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+}
+#sujjest>div>div:first-child>h5{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 12px;
+    color: #595959;
+}
+#jobs>div>div:first-child{
+    height: 64%;
+    
+}
+#sujjest>div>div:first-child{
+    height: 64%;
+    
+}
+#sujjest>div>div:first-child>img{
     width: 64px;
     height: 64px;
     border-radius: 6px;
+
 }
-.vcom{
+#sujjest>div>div:last-child{
+    align-items: baseline;
+}
+#jobs>div>div:last-child>button{
     align-items: center;
     text-align: center;
-    width: 100px;
+    width: 170px;
     height: 40px;
+    margin-left:25px;
+    color: #2557A7;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    background-color:#ffff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid grey;
+}
+#sujjest>div>div:last-child>button{
+    align-items: center;
+    text-align: center;
+    width: 170px;
+    height: 40px;
+    margin-left:25px;
+    color: #2557A7;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    background-color:#ffff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid grey;
 }
 #endpt{
     display: flex;
@@ -183,3 +297,11 @@ h3{
     font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
     color: #2557A7;
 }
+#hr{
+    border:none;
+    border-top:2px solid grey;
+    height:1px;
+    width:100%;
+    margin: auto; 
+    margin-top: 4px;  
+    }
