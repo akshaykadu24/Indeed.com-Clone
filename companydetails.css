@@ -1,0 +1,185 @@
+#head{
+    width: 960px;
+    height: 380px;
+    margin: auto;
+    border: 1px solid brown;
+    display: block;
+}
+#background{
+    width: 100%;
+    height: 210px;
+}
+#background>img{
+    width: 100%;
+    height: 210px; 
+    border-radius: 12px;
+}
+#middle{
+    margin: auto;
+    width: 960px;
+}
+#companyhead{
+    display: flex;
+    
+}
+#about>h4{
+    font-size: 16px;
+    color: #595959;
+    /* font-weight: 100; */
+    font-weight: normal;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+#companyhead>div{
+    display: flex;
+    margin: 1.5px;
+    margin-left: 1.5px;
+}
+#companyhead>div>button{
+    width: 164px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+#companyhead>div>button:first-child{
+    background-color: #2D2D2D;
+    color: #fff;
+
+}
+#companyhead>div:last-child{
+    margin-left : auto;
+    align-items: center;
+    width: 400px;
+}
+#companyhead>div>div>img{
+    margin-top: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius:8px;
+}
+#companyhead>div>div:last-child{
+    margin-left: 16px;
+    border: 1px solid grey;
+    line-height:0cm;
+    width: auto;
+}
+#companyhead>div>div:last-child>h3{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 20px;
+    margin-top: 38px;
+    font-weight: 700;
+    color: #2D2D2D;
+}
+#companyhead>div>div:last-child>h5{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 12px;
+    color: #595959;
+    font-weight: 400;
+    text-decoration: underline;
+}
+#compnavbar{
+    border: 1px solid blue;
+    margin-top  : 56px;
+    
+}
+#compnavbar>button{
+    border: none;
+}
+h3{
+    margin-top: 0px;
+}
+#insights{
+    display: flex;
+    width: 960px;
+    height: 130px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+#insights>div{
+    padding-top: 30px;
+    width: 304px;
+    height: 130px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: #2D2D2D;
+    font-weight: 100;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    /* font-weight: inherit; */
+    border: 1px solid #d4d2d0;
+    border-radius: 12px;
+}
+#insights>div>img{
+    width: 32px;
+    height: 32px;
+}
+#location{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+#location>div{
+    box-shadow: 0 0.125rem 0.25rem rgb(45 45 45 / 12%), 0 0.0625rem 0.1875rem rgb(45 45 45 / 16%), 0 0 0.125rem rgb(45 45 45 / 20%);
+    text-align: center;
+    color: #2D2D2D;
+    font-size: 21px;
+    font-weight: inherit;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    height: 75px;
+    border-radius: 8px;
+
+}
+#sujjest{
+    display: flex;
+}
+#sujjest>div{
+    box-shadow: 0 0.125rem 0.25rem rgb(45 45 45 / 12%), 0 0.0625rem 0.1875rem rgb(45 45 45 / 16%), 0 0 0.125rem rgb(45 45 45 / 20%);
+    border-radius: 8px;
+    padding-left: 5px;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #d4d2d0;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 236px;
+    height: 300px;
+    justify-content: center;
+}
+#sujjest>div>img{
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+}
+.vcom{
+    align-items: center;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+}
+#endpt{
+    display: flex;
+    border: 1px solid blue;
+    text-align: center;
+}
+#endpt>h3{
+    margin-top: 23px;
+    margin-left: 7px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    color: #595959;
+}
+#endpt>h2{
+    margin-top: 22px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    color: #2557A7;
+}
