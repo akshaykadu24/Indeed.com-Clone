@@ -13,7 +13,10 @@ let data= await res.json();
 
 let renderdom=(data)=>{
 let container=document.getElementById("container");
+let count=0;
 data.forEach((el) => {
+    count++;
+    if(count<=6){
     let i=document.createElement("img");
     i.src=el.logoImg;
     let tit=document.createElement("h3");
@@ -23,7 +26,8 @@ data.forEach((el) => {
     }
     let x = Math.floor((Math.random() * 1000));
     let rev=document.createElement("h5");
-    rev.innerText=`${x}Reviews`;
+    rev.innerText=`${el.rating}⭐ ${x}Reviews`;
+    rev.setAttribute("id","revi");
     let sal=document.createElement("a");
     sal.href="https://in.indeed.com/cmp/American-Express/salaries";
     sal.innerText="Salaries";
@@ -45,7 +49,9 @@ data.forEach((el) => {
     divb.append(sal,que,oj);
     div.append(diva,divb);
     container.append(div);
+}
 });
+
 }
 
 function companydetail(data){
