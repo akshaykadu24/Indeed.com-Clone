@@ -59,7 +59,7 @@
 
         }
         #companyhead>div:last-child{
-            margin-left : 400px;
+            margin-left : auto;
             align-items: center;
             width: 400px;
         }
@@ -73,6 +73,7 @@
             margin-left: 16px;
             border: 1px solid grey;
             line-height:0cm;
+            width: auto;
         }
         #companyhead>div>div:last-child>h3{
             font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
@@ -158,11 +159,36 @@
             height: 300px;
             justify-content: center;
         }
+        #sujjest>div>img{
+            width: 64px;
+            height: 64px;
+            border-radius: 6px;
+        }
         .vcom{
             align-items: center;
             text-align: center;
-            width: 200px;
+            width: 100px;
             height: 40px;
+        }
+        #endpt{
+            display: flex;
+            border: 1px solid blue;
+            text-align: center;
+        }
+        #endpt>h3{
+            margin-top: 23px;
+            margin-left: 7px;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+            color: #595959;
+        }
+        #endpt>h2{
+            margin-top: 22px;
+            font-size: 20px;
+            font-weight: 300;
+            font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+            color: #2557A7;
         }
     </style>
 </head>
@@ -176,12 +202,13 @@
             <div></div>
         </div>
         <div id="compnavbar">
-            <button onclick="company()">Snapshot</button>
+            <button >Snapshot</button>
             <button>Snapshot</button>
             <button>Snapshot</button>
             <button>Snapshot</button>
         </div>
     </div>
+   <div id="mid">
     <div id="middle">
         <h2>About the company</h2>
         <div id="brief">
@@ -221,8 +248,11 @@
         </div>
         <h2>People also viewed</h2>
         <div id="sujjest"></div>
-        <h2><a href="/companyreview.html">Companies</a></h2>
+        <div id="endpt">
+            <h2><a href="/companyreview.html">Companies</a></h2>
+        </div>
     </div>
+   </div>
 </body>
 </html>
 
@@ -237,21 +267,24 @@ window.addEventListener("load",()=>{
         let abt=document.getElementById("about");
         let background=document.getElementById("background");
         let back=document.createElement("img");
-        back.src=compdata.background;
+        back.src=compdata.backgroundImg;
         let info=document.createElement("h4");
-        info.innerText=compdata.details;
+        info.innerText=compdata.Description;
         abt.append(info);
         background.append(back);
 
         
         let companyhead=document.getElementById("companyhead");
+        let endpt=document.getElementById("endpt");
         let i=document.createElement("img");
-        i.src=compdata.logo;
+        i.src=compdata.logoImg;
         let tit=document.createElement("h3");
-        tit.innerText=compdata.name;
-                let x = Math.floor((Math.random() * 1000));
+        tit.innerText=compdata.company;
+        let titn=document.createElement("h3");
+        titn.innerText=`> ${compdata.company}`;
+        let x = Math.floor((Math.random() * 1000));
         let rev=document.createElement("h5");
-        rev.innerText=`${x}Reviews`;
+        rev.innerText=`${compdata.rating}Rating ${x}Reviews`;
         let diva=document.createElement("div");
         let div1=document.createElement("div");
         let div2=document.createElement("div");
@@ -265,6 +298,7 @@ window.addEventListener("load",()=>{
         diva.append(div1,div2);
         divb.append(follow,wri);
         companyhead.append(diva,divb);
+        endpt.append(titn);
 
 
 
@@ -272,20 +306,24 @@ window.addEventListener("load",()=>{
         console.log(alldata);
         let sujjest=document.getElementById("sujjest");
 
-        
+        let count=0;
             alldata.forEach((el) => {
-                if(el.name !== compdata.name){
+                count++;
+                if(el.company !== compdata.company&&count<=5){
             let ind=document.createElement("h3");
             ind.src=el.industry;
             let i=document.createElement("img");
-            i.src=el.logo;
+            i.src=el.logoImg;
             let tit=document.createElement("h3");
-            tit.innerText=el.name;
+            tit.innerText=el.company;
             let x = Math.floor((Math.random() * 1000));
             let rev=document.createElement("h5");
-            rev.innerText=`${x}Reviews`;
+            rev.innerText=`${el.rating}Rating ${x}Reviews`;
             let vc=document.createElement("button");
             vc.innerText="View Company";
+            vc.onclick=()=>{
+                view(el);
+            }
             vc.setAttribute("class","vcom");
 
             let div1=document.createElement("div");
@@ -298,7 +336,12 @@ window.addEventListener("load",()=>{
 
 
     }
-    
+    let  view=(data)=>{
+    localStorage.setItem("comp",JSON.stringify(data));
+    let compdata=JSON.parse(localStorage.getItem("comp"))||[];
+    console.log(compdata);
+    window.location.href="/companydetails.html";
+    }
 
 
 </script>
