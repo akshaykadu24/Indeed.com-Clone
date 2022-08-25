@@ -1,0 +1,45 @@
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 3% 0px 3%;
+    /* border: 1px solid rgb(171, 168, 168); */
+    
+}
+#div1{
+    /* border: 1px solid red; */
+    display: flex;
+    gap: 20px;  
+}
+
+#first{
+    width:20%;
+    padding: 10px 0px 10px 0px;
+    /* border: 1px solid red; */
+    height: 30px;
+}
+#second{
+    width: 10%;
+    /* display: flex; */
+   
+}
+#div2{
+    border: 1px solid red;
+    padding-top: 15px;
+    display: flex;
+    gap: 10px;
+    height: 30px;
+    
+}
+#div2>p{
+    /* padding-top: -300px; */
+}
+a{
+    text-decoration: none;
+}
+#profile{
+    width: 30px;
+    padding: 0px 0px 10px 0px;
+    
+}
+#navbar{font-family: 'Noto Sans', sans-serif;}
