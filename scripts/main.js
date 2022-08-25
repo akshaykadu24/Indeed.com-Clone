@@ -1,3 +1,6 @@
+import {navbar,signin_navbar} from "../components/navbar.js"
+let nav = document.getElementById('navbar')
+nav.innerHTML = signin_navbar()
 
 window.addEventListener('load',()=>{
     getdata()
