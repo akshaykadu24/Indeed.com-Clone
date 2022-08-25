@@ -162,7 +162,7 @@
     })
 
     let companies=async()=>{
-    let res=await fetch("https://limitless-wildwood-96623.herokuapp.com/api/companies");
+    let res=await fetch("https://pacific-refuge-88537.herokuapp.com/api/Indded");
     let data= await res.json();
      console.log(data);
      localStorage.setItem("data",JSON.stringify(data));
@@ -174,9 +174,9 @@
     let container=document.getElementById("container");
     data.forEach((el) => {
         let i=document.createElement("img");
-        i.src=el.logo;
+        i.src=el.logoImg;
         let tit=document.createElement("h3");
-        tit.innerText=el.name;
+        tit.innerText=el.company;
         tit.onclick=()=>{
             companydetail(el);
         }
