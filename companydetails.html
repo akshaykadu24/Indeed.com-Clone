@@ -1,0 +1,149 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #head{
+            width: 960px;
+            height: 380px;
+            margin: auto;
+            border: 1px solid brown;
+            display: block;
+        }
+        #background{
+            width: 100%;
+            height: 210px;
+        }
+        #background>img{
+            width: 100%;
+            height: 210px; 
+        }
+        #middle{
+            margin: auto;
+            width: 960px;
+        }
+        #companyhead{
+            display: flex;
+            
+        }
+        #companyhead>div{
+            display: flex;
+            margin: 1.5px;
+            margin-left: 1.5px;
+        }
+        #companyhead>div>button{
+            width: 106px;
+            height: 36px;
+        }
+        h3{
+            margin-top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+        <div id="background"></div>
+        <div id="companyhead">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="compnavbar">
+            <button onclick="company()">Snapshot</button>
+            <button>Snapshot</button>
+            <button>Snapshot</button>
+            <button>Snapshot</button>
+        </div>
+    </div>
+    <div id="middle">
+        <h2>About the company</h2>
+        <div id="brief">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="about"></div>
+        <button>Learn More ></button>
+        <h2>Explore</h2>
+        <div></div>
+        <h2>Jobs near you</h2>
+        <div id="jobs"></div>
+        <h2>Salaries</h2>
+        <div id="salaries"></div>
+        <h2>Interview insights</h2>
+        <div id="insights">
+            <div><img src="https://in.indeed.com/cmp/-/s/8841ff5f1daf19ee/ic_experience_favorable.svg" alt=""> <h6>Favorable experience</h6></div>
+            <div><img src="https://in.indeed.com/cmp/-/s/914f18a4ea893286/ic_difficulty_medium.svg" alt=""> <h6>Interview is average</h6></div>
+            <div><img src="https://in.indeed.com/cmp/-/s/1bf03a9251691714/ic_hiring_duration.svg" alt=""><h6>Process takes about two weeks</h6></div>
+        </div>
+        <h2>Locations</h2>
+        <div id="Location">
+            <div><h6>Bengaluru, Karnataka ></h6></div>
+            <div><h6>Mumbai, Maharashtra ></h6></div>
+            <div><h6>Pune, Maharashtra ></h6></div>
+            <div><h6>Hyderabad, Telangana ></h6></div>
+            <div><h6>New Delhi, New Delhi ></h6></div>
+            <div><h6>Chennai, Tamil Nadu ></h6></div>
+        </div>
+        <h2>People also viewed</h2>
+        <div id="sujjest"></div>
+        <h2><a href="/companyreview.html">Companies</a></h2>
+    </div>
+</body>
+</html>
+
+<script>
+window.addEventListener("load",()=>{
+        company();
+    })
+    let company=()=>{
+        let compdata=JSON.parse(localStorage.getItem("comp"));
+        console.log(compdata);
+
+        let abt=document.getElementById("about");
+        let background=document.getElementById("background");
+        let back=document.createElement("img");
+        back.src=compdata.background;
+        let info=document.createElement("h4");
+        info.innerText=compdata.details;
+        abt.append(info);
+        background.append(back);
+
+        
+        let companyhead=document.getElementById("companyhead");
+        let i=document.createElement("img");
+        i.src=compdata.logo;
+        let tit=document.createElement("h3");
+        tit.innerText=compdata.name;
+        let x = Math.floor((Math.random() * 1000));
+        let rev=document.createElement("h5");
+        rev.innerText=`${x}Reviews`;
+        let diva=document.createElement("div");
+        let div1=document.createElement("div");
+        let div2=document.createElement("div");
+        let follow=document.createElement("button");
+        follow.innerText="Follow";
+        let wri=document.createElement("button");
+        wri.innerText="Write A Review";
+        let divb=document.createElement("div");
+        div1.append(i);
+        div2.append(tit,rev);
+        diva.append(div1,div2);
+        divb.append(follow,wri);
+        companyhead.append(diva,divb);
+
+    }
+    
+
+
+</script>
