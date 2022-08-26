@@ -1,0 +1,176 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+      #main {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        background-color: #f3f2f1;
+        height: 100%;
+        padding: 100px;
+      }
+      #inner {
+        width: 450px;
+        border: 1px solid #d4d2d0;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+
+        padding: 1.5rem 1rem;
+        border-radius: 0.5rem;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgb(212, 210, 208);
+        background: linear-gradient(
+          rgb(248, 249, 254) 0%,
+          rgb(248, 249, 254) 54%,
+          rgb(255, 255, 255) 46%,
+          rgb(255, 255, 255) 100%
+        );
+      }
+      #imgdiv {
+        box-sizing: border-box;
+        margin: 1.5rem 0px;
+        min-width: 0px;
+        position: relative;
+        display: block;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+      }
+      #imgdiv > img {
+        max-width: 30%;
+
+        width: 100%;
+        height: auto;
+      }
+      #imgdiv > h2 {
+        margin-top: 0px;
+        padding-bottom: 30px;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        color: rgb(89, 89, 89);
+        font-size: 1.25rem;
+        line-height: 1.5;
+        font-weight: 700;
+      }
+
+      #selecttype > h3 {
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        color: rgb(89, 89, 89);
+        font-size: 1rem;
+        line-height: 1.5;
+        font-weight: 700;
+      }
+      #selecttype > p {
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-weight: inherit;
+        color: rgb(89, 89, 89);
+        font-size: 0.875rem;
+        line-height: 1.5;
+      }
+      #selecttype > button {
+        box-sizing: border-box;
+        background: none rgb(255, 255, 255);
+        appearance: none;
+        text-align: left;
+        text-decoration: none;
+        border: 1px solid rgb(212, 210, 208);
+        cursor: pointer;
+        user-select: none;
+
+        align-items: center;
+
+        justify-content: center;
+        position: relative;
+        margin: 0.5rem 0px;
+        padding: 0.5625rem 1rem;
+        line-height: 1.5;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        text-align: center;
+        width: 100%;
+        color: rgb(37, 87, 167);
+      }
+      #selecttype > button:hover {
+        background-color: #eef1fe;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="inner">
+        <div id="imgdiv">
+          <img src="https://htmlguy.com/img/logos/htmlguy-thumbs-up.png" />
+          <h2>Wellcome!</h2>
+        </div>
+        <div id="selecttype">
+          <h3>Ready for the next step?</h3>
+          <p>Create an account for tools to help you</p>
+          <button id="job_seeker">job seeker</button>
+          <button id="Employed">Employed</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  let but1 = document.getElementById("job_seeker");
+  but1.onclick = () => {
+    getdata("job_seeker");
+  };
+
+  let but2 = document.getElementById("Employed");
+  but2.onclick = () => {
+    localStorage.setItem("Athorised", JSON.stringify("Employed"));
+
+    getdata("Employed");
+  };
+
+  let signinId = JSON.parse(localStorage.getItem("signinid"));
+  let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
+  let getdata = async (name) => {
+    let res = await fetch(url);
+    res = await res.json();
+
+    updatedata(signinId, name);
+  };
+  let returnornot = JSON.parse(localStorage.getItem("return"));
+  let updatedata = async (id, name) => {
+    data = { Athorised: name };
+
+    let res = await fetch(
+      `https://pacific-refuge-88537.herokuapp.com/api/signup/${id}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(data),
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
+
+    if (returnornot == "return") {
+      window.location.href = "setting.html";
+    } else {
+      window.location.href = "index.html";
+    }
+  };
+</script>

@@ -77,7 +77,7 @@ body {
   height: 100%;
 }
 .menu:hover {
-  border-bottom: 2px solid #6792f0;
+  border-bottom: 4px solid #6792f0;
 }
 #lastdiv {
   display: grid;
