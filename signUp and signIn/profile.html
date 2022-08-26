@@ -1,0 +1,311 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <style>
+      #profile {
+        box-sizing: border-box;
+        margin: 0px;
+        min-width: 0px;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        background-color: #f3f2f1;
+      }
+      #innerprofile {
+        width: 700px;
+        background-color: fff;
+        padding: 100px 100px 30px 100px;
+      }
+
+      .info {
+        margin: 0px;
+        color: rgb(45, 45, 45);
+        font-weight: 700;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      .details {
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-weight: inherit;
+        color: rgb(89, 89, 89);
+        font-size: inherit;
+        line-height: inherit;
+      }
+      .changebutton {
+        box-sizing: border-box;
+        background: none rgb(255, 255, 255);
+        appearance: none;
+        text-align: left;
+        text-decoration: none;
+        
+        cursor: pointer;
+        user-select: none;
+
+        align-items: center;
+
+        justify-content: center;
+        position: relative;
+        margin: 0px;
+        padding: 0.5625rem 2rem;
+        line-height: 1.5;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        display: inline-flex;
+        color: rgb(37, 87, 167);
+      }
+      .innerdiv {
+        border-top: 1px solid #e4e2e0;
+        padding-top: 15px;
+
+        box-sizing: border-box;
+        margin: 0px 0px 1.5rem;
+        min-width: 0px;
+        display: flex;
+
+        justify-content: space-between;
+        margin-bottom: 10px;
+        align-items: center;
+      }
+      #lastinndiv {
+        border-bottom: 1px solid #e4e2e0;
+        padding-bottom: 20px;
+      }
+      .dotpass {
+        font-size: 40px;
+        padding: 0px;
+        margin: 0px;
+        margin-top: -10px;
+      }
+      .classpass {
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-weight: inherit;
+        color: rgb(89, 89, 89);
+        font-size: inherit;
+        line-height: inherit;
+      }
+      #lastprofilediv{
+        width: 700px;
+        background-color: fff;
+        padding: 100px 100px 100px 100px;
+        
+      }
+      #info2{
+        margin: 0px;
+        color: rgb(45, 45, 45);
+        font-weight: 700;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-size: 2rem;
+        line-height: 1.5;
+        
+      }
+      .placeholders{
+        box-sizing: border-box;
+        background: none rgb(255, 255, 255);
+        appearance: none;
+        text-align: left;
+        text-decoration: none;
+        border: 1px solid rgb(212, 210, 208);
+
+       
+        
+        align-items: center;
+       
+        justify-content: center;
+        position: relative;
+        text-align: center;
+        margin: 0px;
+        padding: 0.5625rem 1rem;
+        line-height: 1.5;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-size: 1rem;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        display: flex;
+        width: 100%;
+        color: rgb(37, 87, 167);
+      }#savebutton{
+        box-sizing: border-box;
+        background: none rgb(255, 255, 255);
+        appearance: none;
+        text-align: left;
+        text-decoration: none;
+        border: 1px solid rgb(212, 210, 208);
+
+       
+        
+        align-items: center;
+       
+        justify-content: center;
+        position: absolute;
+        text-align: center;
+        align-self: center;
+        margin: 0px;
+        padding: .5rem 1rem;
+        cursor: pointer;
+        line-height: 1.5;
+        font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+          "Liberation Sans", Roboto, Noto, sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        border-radius: 1rem;
+        transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+          color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+        display: flex;
+        width: 20%;
+        color: #fff;
+        margin-top: 10px;
+       
+        background-color: rgb(37, 87, 167);
+
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div id="profile">
+        <div>
+            <h1>Profile</h1>
+        </div>
+        <div id="innerprofile">
+          
+           
+         </div>
+         <div id="buildprofile">
+            <h1>build profile</h1>
+          </div>
+          <div id="lastprofilediv">
+            <h2 class="info2" > Education:</h2>
+            <input class="placeholders" id="edu" type="text" placeholder="your Education">
+            <h2 class="info2">IT Skills:</h2>
+            <input class="placeholders"  id="it" type="text" placeholder="your it skills">
+            <h2 class="info2" >Languages:</h2>
+            <input class="placeholders" id="lang" type="text" placeholder="laguages you knows">
+            <h2 class="info2" >Work Experience (in year):</h2>
+            <input class="placeholders" id="exp" type="text" placeholder="work experience">
+            <h2 class="info2" >work in companies (in number):</h2>
+            <input class="placeholders" id="comp" type="text" placeholder="work in companies">
+            <h2 class="info2" >your location:</h2>
+            <input class="placeholders" id="loc" type="text" placeholder="Add City,State.">
+            <h2 class="info2" >prefred location for job:</h2>
+            <input class="placeholders" id="pref" type="text" placeholder="prefred location">
+            <h2 class="info2">job interest:</h2>
+            <input class="placeholders" id="int" type="text" placeholder="like backend devloper">
+            <br>
+            <button id="savebutton">Save</button>
+          </div>
+    </div>
+  </body>
+</html>
+<script>
+  let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
+  let signinid = JSON.parse(localStorage.getItem("signinid"));
+
+  window.onload = () => {
+    getdata();
+  };
+
+  let getdata = async () => {
+    let res = await fetch(
+      `https://pacific-refuge-88537.herokuapp.com/api/signup/${signinid}`
+    );
+    res = await res.json();
+    if(res.jobinterest !==undefined){
+        let div=document.getElementById('lastprofilediv');
+        let div2=document.getElementById('buildprofile');
+        div.style.display='none';
+        div2.innerHTML=null;
+    }
+    
+    append(res);
+  };
+  let passchange = false;
+  let append = (data) => {
+    let div=document.getElementById('innerprofile');
+    div.innerHTML=null;
+     for(let key in data){
+      if(key=='id'){
+
+      }else{
+        let div0=document.createElement('div');
+        let h2=document.createElement('h2');
+        let but=document.createElement('h3');
+        h2.innerText=key;
+        but.innerText=data[key];
+        h2.setAttribute('class',"info");
+        but.setAttribute('class','changebutton')
+        div0.setAttribute('class','innerdiv');
+        div0.append(h2,but);
+        div.append(div0);
+      }
+      
+
+     }
+  };
+
+
+
+  savebutton=document.getElementById('savebutton');
+  savebutton.onclick=()=>{
+    let data={
+        Education:document.getElementById('edu').value,
+        IT_Skills:document.getElementById('it').value,
+        Languages:document.getElementById('lang').value,
+        Experience:document.getElementById('exp').value,
+        worked_companies:document.getElementById('comp').value,
+        location:document.getElementById('loc').value,
+        prefred_location:document.getElementById('pref').value,
+        jobinterest:document.getElementById('int').value,
+    }
+    if(data.Education=="" || data.Experience=="" ||data.IT_Skills==""|| data.Languages==""||data.jobinterest==""||data.location==""||data.prefred_location==""||data.worked_companies==""){
+        alert('fill all the data')
+    }else{
+       
+        
+        updatedata(data)
+
+    }
+  }
+  
+  let updatedata = async (data) => {
+   
+    let res = await fetch(
+      `https://pacific-refuge-88537.herokuapp.com/api/signup/${signinid}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(data),
+        headers: {
+          "content-type": "application/json",
+        },
+      }
+    );
+
+    getdata();
+  };
+
+
+</script>
