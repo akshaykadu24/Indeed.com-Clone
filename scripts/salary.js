@@ -66,7 +66,7 @@ let renderDom = (data) => {
         let cont1 = document.getElementById("result2");
         cont1.innerHTML = "";
 
-        data.forEach(({ compoany, logoImg, rating }) => {
+        data.forEach(({ company, logoImg, rating }) => {
             let item2 = document.createElement("div");
             item2.setAttribute("class", "item22");
 
@@ -85,7 +85,7 @@ let renderDom = (data) => {
 
             let p5 = document.createElement("h2");
             p5.setAttribute("id", "p5");
-            p5.innerText = compoany;
+            p5.innerText = company;
 
             let p6 = document.createElement("p");
             p6.innerText = rating;
