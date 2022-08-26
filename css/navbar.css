@@ -20,20 +20,21 @@
 }
 #second{
     width: 10%;
+    height: 100%;
     /* display: flex; */
    
 }
 #div2{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     padding-top: 15px;
     display: flex;
     gap: 10px;
     height: 30px;
     
 }
-#div2>p{
+/* #div2>p{
     /* padding-top: -300px; */
-}
+*/
 a{
     text-decoration: none;
 }
