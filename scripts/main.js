@@ -151,3 +151,59 @@ console.log(t_search,c_search)
     console.log(data)
     renderDom(data[0])
 }
+
+let tat = document.getElementById('title')
+let cat = document.getElementById('loca')
+let debounce_append = (data)=>{
+    let i = document.getElementById('i')
+    i.innerHTML = null
+    data.forEach(({Title})=>{
+        let tit = document.createElement('p')
+        tit.innerText = Title
+        tit.addEventListener('click',()=>{
+            tat.value = Title
+            i.innerHTML = null
+        })
+        i.append(tit)
+    })
+    
+}
+let debounce_append2 = (data)=>{
+    let c = document.getElementById('c')
+    c.innerHTML = null
+    data.forEach(({city})=>{
+        let cit = document.createElement('p')
+        cit.innerText = city
+        cit.addEventListener('click',()=>{
+            loca.value = city
+            c.innerHTML = null
+        })
+        c.append(cit)
+    })
+    
+}
+let title = document.getElementById('title')
+title.addEventListener('input',()=>{
+    inp_title()
+})
+let inp_title = async()=>{
+    let query = title.value
+    console.log(query)
+    let res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?q=${query}`)
+    let data = await res.json()
+    console.log(data)
+    debounce_append(data)
+}
+
+let city = document.getElementById('loca')
+city.addEventListener('input',()=>{
+    inp_city()
+})
+let inp_city = async()=>{
+    let query = city.value
+    console.log(query)
+    let res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?q=${query}`)
+    let data = await res.json()
+    console.log(data)
+    debounce_append2(data)
+}
