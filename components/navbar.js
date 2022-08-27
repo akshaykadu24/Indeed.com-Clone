@@ -11,8 +11,8 @@ let navbar = ()=>{
          </div>
     
     <div id="div2">
-        <a href="./signin.html">Signin</a>
-        <a href="./signup.html">Signup</a>
+        <a id="sign_hover" href="./signin.html">Signin</a>
+        <a id="signup_hover" href="./signup.html">Signup</a>
     </div>`
 }
 let signin_navbar = ()=>{
