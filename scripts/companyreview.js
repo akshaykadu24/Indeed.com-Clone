@@ -1,6 +1,11 @@
 import {navbar,signin_navbar} from "../components/navbar.js"
 let nav = document.getElementById('navbar')
-nav.innerHTML = signin_navbar()
+let data=JSON.parse(localStorage.getItem('signinsatus'))
+if(data ===true){
+  nav.innerHTML = signin_navbar()
+}else{
+  nav.innerHTML = navbar();
+}
 
 
 import {footbar} from "../components/footbar.js"
