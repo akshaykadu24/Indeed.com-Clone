@@ -1,6 +1,110 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
 #container{
-    background-color: green ;
+    border: 1px solid rgb(205, 205, 205);
+    padding: 20px;
+    border-radius: 15px;
+    width: 300%;
 }
 button{
-    color: blue;
+    background-color: rgb(37,87,167);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: large;
+    border-radius: 6px;
+
+}
+#main{
+    width: 65%;
+    margin: auto;
+    display: flex;
+    gap: 20px;
+}
+#sal_type{
+    display: flex;
+    gap: 10px;
+    
+}
+#sal_type>p{
+    background-color: rgb(202, 202, 202);
+    padding: 5px 10px;
+    margin: 0px;
+    border-radius: 5px;
+
+}
+#sal_types{
+    display: flex;
+    gap: 50px;
+}
+#sal_types+p{
+    margin: 0px 0px 10px 0px ;
+}
+#jobs{
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 0px 20px;
+    margin-bottom: 10px;
+}
+#comp_rating{
+    display: flex;
+    gap: 10px;
+    /* border: 1px solid red; */
+    margin: -20px 0px;
+}
+#comp_rating>h4{
+    margin: 1px;  
+    /* border: 1px solid red; */
+
+}
+#comp_rating>p{
+  margin: 1px;  
+}
+p{
+    margin:25px 0px 10px 0px;
+}
+#inp{
+    margin: auto;
+    /* border: 1px solid red; */
+    text-align: center;
+    
+}
+input{
+    width: 25%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0px 15px;
+    border: 1px solid black;
+}
+#i{
+    width: 24.5%;
+    margin-left: 20.5%;
+    background-color: white;
+    position: absolute;
+    padding-left: 7px;
+    border: 1px solid grey;
+}
+#c{
+    width: 24.5%;
+    margin-left: 47.5%;
+    background-color: white;
+    position: absolute;
+    padding-left: 7px;
+    border: 1px solid grey;
+}
+/* #i>p{
+    border: 1px solid grey;
+    border-bottom:1px ;
+    border-top:1px ;
+    margin: 0px;
+    padding: 13px 0px 13px 5px;
+} */
+
+@media only screen and (min-width: 0px) and (max-width: 900px) {
+    #main{
+        width: 100%;
+        
+    }
+
 }
