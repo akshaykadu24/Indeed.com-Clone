@@ -1,4 +1,4 @@
-function navbar(){
+function Post_navbar(){
     return 
     `<div>
     <div id="logodiv">
@@ -17,3 +17,4 @@ function navbar(){
     <h2 class="menu">Find jobs</h2>
   </div>`
 }
+export default Post_navbar;
