@@ -2,19 +2,19 @@
 #navbar{
     display: flex;
     justify-content: space-between;
+    height: 60px;
     padding: 0px 3% 0px 3%;
     /* border: 1px solid rgb(171, 168, 168); */
     
 }
 #div1{
+    
     /* border: 1px solid red; */
     display: flex;
     gap: 20px;  
 }
 #div1>P{
-   /* border: 1px solid red; */
-   margin: 20px 5px; 
-     
+    margin-top: 18px;
 }
 #first{
     width:20%;
@@ -24,6 +24,7 @@
 }
 #second{
     width: 10%;
+    
     /* display: flex; */
    
 }
@@ -49,6 +50,7 @@ a{
     /* border: 1px solid red; */
     
 }
+
 #navbar{font-family: 'Noto Sans', sans-serif;}
 
 @media only screen and (min-width:0px) and (max-width:900px){
@@ -65,3 +67,42 @@ a{
     gap: 20px;
    }
 }
+
+
+
+/* adding navbar changes dropdown profile */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #F9F9F9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .show {
+    display: block;
+  }
+  #div2 > a:hover {
+      padding-bottom: 40px;
+      border-bottom: 4px solid blue;
+    }
+  #div1 > p:hover {
+    padding-bottom: 40px;
+    border-bottom: 4px solid blue;
+  }
+  p:hover{
+    padding-bottom: 40px;
+    border-bottom: 4px solid blue;
+  }
