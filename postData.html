@@ -4,27 +4,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./postpage.css" />
+    <link rel="stylesheet" href="./Post_navbar.css" />
     <title>postJob</title>
   </head>
   <body>
-    <div id="navbar">
-      <div>
-        <div id="logodiv">
-          <img
-            id="logo"
-            src="https://www.pngkit.com/png/full/1009-10092379_indeed-logo-white-indeed-logo.png"
-            alt=""
-          />
-          <p id="logotag">for employers</p>
-        </div>
-        <h2 id="postjob" class="menu">Post a job</h2>
-      </div>
-      <div id="lastdiv">
-        <h2 class="menu">Help Center</h2>
-        <button id="signinbutton">Sign in</button>
-        <h2 id="findjob" class="menu">Find jobs</h2>
-      </div>
-    </div>
+    <div id="navbar"></div>
     <div id="main">
       <div id="top">
         <div class="infodiv">
@@ -81,46 +65,4 @@
     </div>
   </body>
 </html>
-<script>
-  let button2 = document.getElementById("signinbutton");
-  button2.onclick = () => {
-    window.location.href = "signin.html";
-  };
-  let button3 = document.getElementById("findjob");
-  button3.onclick = () => {
-    window.location.href = "index.html";
-  };
-  let button4 = document.getElementById("postjob");
-  button4.onclick = () => {
-    window.location.href = "postData.html";
-  };
-
-  let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
-  let signinid = JSON.parse(localStorage.getItem("signinid"));
-  let data = JSON.parse(localStorage.getItem("signinsatus"));
-
-  let button = document.getElementById("postbutton");
-  button.onclick = async () => {
-    res = await fetch(
-      `https://pacific-refuge-88537.herokuapp.com/api/signup/${signinid}`
-    );
-    res = await res.json();
-    console.log(res);
-
-    if (data !== true) {
-      alert("You are not sign In");
-    } else if (res.Athorised == "Employed") {
-      window.location.href = "addJobData.html";
-    } else {
-      alert("Your are not Athorised");
-      window.location.href = "findJob.html";
-    }
-  };
-  window.addEventListener("scroll", function () {
-    let header = document.getElementById("navbar");
-
-    setTimeout(() => {
-      header.setAttribute("class", "stickyheader");
-    }, 5000);
-  });
-</script>
+<script type="module" src="./postData.js"></script>

@@ -1,0 +1,172 @@
+#profile {
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: #f3f2f1;
+}
+#innerprofile {
+  width: 700px;
+  background-color: fff;
+  padding: 100px 100px 30px 100px;
+}
+
+.info {
+  margin: 0px;
+  color: rgb(45, 45, 45);
+  font-weight: 700;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.details {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-weight: inherit;
+  color: rgb(89, 89, 89);
+  font-size: inherit;
+  line-height: inherit;
+}
+.changebutton {
+  box-sizing: border-box;
+  background: none rgb(255, 255, 255);
+  appearance: none;
+  text-align: left;
+  text-decoration: none;
+
+  cursor: pointer;
+  user-select: none;
+
+  align-items: center;
+
+  justify-content: center;
+  position: relative;
+  margin: 0px;
+  padding: 0.5625rem 2rem;
+  line-height: 1.5;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  display: inline-flex;
+  color: rgb(37, 87, 167);
+}
+.innerdiv {
+  border-top: 1px solid #e4e2e0;
+  padding-top: 15px;
+
+  box-sizing: border-box;
+  margin: 0px 0px 1.5rem;
+  min-width: 0px;
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+#lastinndiv {
+  border-bottom: 1px solid #e4e2e0;
+  padding-bottom: 20px;
+}
+.dotpass {
+  font-size: 40px;
+  padding: 0px;
+  margin: 0px;
+  margin-top: -10px;
+}
+.classpass {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-weight: inherit;
+  color: rgb(89, 89, 89);
+  font-size: inherit;
+  line-height: inherit;
+}
+#lastprofilediv {
+  width: 700px;
+  background-color: fff;
+  padding: 100px 100px 100px 100px;
+}
+#info2 {
+  margin: 0px;
+  color: rgb(45, 45, 45);
+  font-weight: 700;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+.placeholders {
+  box-sizing: border-box;
+  background: none rgb(255, 255, 255);
+  appearance: none;
+  text-align: left;
+  text-decoration: none;
+  border: 1px solid rgb(212, 210, 208);
+
+  align-items: center;
+
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  margin: 0px;
+  padding: 0.5625rem 1rem;
+  line-height: 1.5;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  display: flex;
+  width: 100%;
+  color: rgb(37, 87, 167);
+}
+#savebutton {
+  box-sizing: border-box;
+  background: none rgb(255, 255, 255);
+  appearance: none;
+  text-align: left;
+  text-decoration: none;
+  border: 1px solid rgb(212, 210, 208);
+
+  align-items: center;
+
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  align-self: center;
+  margin: 0px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  line-height: 1.5;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 1rem;
+  transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  display: flex;
+  width: 20%;
+  color: #fff;
+  margin-top: 10px;
+
+  background-color: rgb(37, 87, 167);
+}

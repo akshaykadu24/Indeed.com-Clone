@@ -1,0 +1,151 @@
+body {
+  margin: 0px;
+}
+#main {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  background-color: #f3f2f1;
+
+  padding: 100px;
+}
+#main > div {
+  width: 600px;
+}
+#main > div:nth-child(2) {
+  width: 600px;
+  border: 1px solid #d4d2d0;
+  border-radius: 10px;
+}
+
+#signupdata {
+  margin: 20px;
+  padding: 30px;
+  border: 1px solid #d4d2d0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 0px;
+  min-width: 0px;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(212, 210, 208);
+  margin-bottom: 1.5rem;
+}
+#signupdata > h2 {
+  margin: 0px 0px 0.5rem;
+  color: rgb(45, 45, 45);
+  font-weight: 700;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+#signupdata > h4 {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-weight: inherit;
+  color: rgb(89, 89, 89);
+  font-size: inherit;
+  line-height: inherit;
+}
+#signupdata > p {
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-weight: inherit;
+  color: rgb(89, 89, 89);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+#signupdata > input {
+  box-sizing: border-box;
+  background: none rgb(255, 255, 255);
+  appearance: none;
+  text-align: left;
+  text-decoration: none;
+  border: 1px solid rgb(212, 210, 208);
+
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  margin: 0px;
+  padding: 0.5625rem 1rem;
+  line-height: 1.5;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  display: flex;
+  width: 100%;
+  color: rgb(37, 87, 167);
+}
+#signupdata > button {
+  box-sizing: border-box;
+  background: none rgb(37, 87, 167);
+  appearance: none;
+  text-align: left;
+  text-decoration: none;
+  border: 1px solid rgb(37, 87, 167);
+  cursor: pointer;
+  user-select: none;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  margin: 1rem 0px 0px;
+  padding: 0.5625rem 1rem;
+  line-height: 1.5;
+  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial,
+    "Liberation Sans", Roboto, Noto, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: border-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    background-color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    opacity 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    box-shadow 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    color 200ms cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+  display: flex;
+  width: 100%;
+  color: rgb(255, 255, 255);
+}
+#logodiv {
+  width: 25%;
+  margin-bottom: 30px;
+}
+.tags {
+  line-height: 20px;
+  padding: 0px 100px;
+}
+.tags:last-child {
+  margin-top: 20px;
+}
+.tags > a {
+  color: #2d2d2d;
+  white-space: normal;
+  margin-right: 20px;
+  font-size: 0.875rem;
+  line-height: 2;
+  margin-top: 30px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.tags > a:hover {
+  text-decoration: underline;
+}
