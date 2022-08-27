@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footbar.css">
+    <style>
+        #one {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            width: 100%;
+        }
+
+        #one>h1 {
+            font-size: 48px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 15%;
+        }
+
+        #one>div {
+            width: 80%;
+            display: flex;
+            margin-left: 15%;
+
+        }
+
+        input {
+            height: 25px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+
+
+        #two {
+            width: 100%;
+            background-color: #eff7f6;
+
+        }
+
+        #two>div>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 15%;
+        }
+
+        #two>div>p {
+            font-size: 15px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 400;
+            margin-left: 15%;
+            color: #767676;
+        }
+
+        #select {
+            height: 35px;
+            margin-left: 15%;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        #two>div>div {
+            width: 60%;
+            display: flex;
+            border-radius: 10px;
+            background-color: #eff7f6;
+            margin-left: 15%;
+            margin-top: 10px;
+        }
+
+        #sal>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            color: #767676;
+        }
+
+        #sal2>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 20px;
+        }
+
+        #cities>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 20px;
+            margin-left: 15%;
+            margin-top: 50px;
+        }
+
+        #cities>div {
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #citi1 {
+            width: 47%;
+        }
+
+        #citi2 {
+            width: 47%;
+        }
+
+        .citi3 {
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 8px;
+        }
+
+        .citi4 {
+            width: 100%;
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 8px;
+        }
+
+        #similar1 {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 13px;
+        }
+
+        .tech {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        #tech {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-left: 15%;
+        }
+
+        #help {
+            box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            width: 80%;
+            height: 120px;
+            margin: auto;
+            display: flex;
+            margin-top: 40px;
+
+        }
+
+        #help1 {
+            width: 60%;
+        }
+
+        #help1>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+
+        #help2 {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-left: 50px;
+        }
+
+        #help2>div {
+
+            height: 50%;
+            width: 18%;
+        }
+
+        #help2>div>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* -------------------------------------------------------------------------- */
+        #freq {
+            border: 1px solid #eff7f6;
+            height: 500px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            background-color: #eff7f6;
+        }
+
+        #freq>h1 {
+            font-size: 30px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 700;
+            margin-left: 20px;
+            margin-top: 30px;
+        }
+
+        #freq>div {
+            margin-top: 10px;
+            height: 100%;
+            width: 20%;
+        }
+
+        .freq1>p {
+            font-size: 14px;
+            font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", sans-serif;
+            font-weight: 500;
+            margin-bottom: 22px;
+
+
+        }
+
+        .citi3:hover {
+            background-color: #5a4db3;
+            color: white;
+        }
+
+        .citi4:hover {
+            background-color: #5a4db3;
+            color: white;
+        }
+
+        .tech:hover {
+            background-color: #edede9;
+        }
+
+        .freq1:hover {
+            text-decoration: underline;
+        }
+
+        #what {
+            width: 80%;
+            height: 100px;
+            align-self: center;
+            border-radius: 10px;
+            background-color: white;
+
+        }
+
+        #what>button {
+            width: 20%;
+            height: 35px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #023e8a;
+            color: white;
+            border: #023e8a;
+        }
+
+        #what1 {
+            width: 30%;
+            margin-top: 30px;
+            height: 30px;
+        }
+
+        #what2 {
+            width: 30%;
+            height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+
+    </div>
+    <div id="one">
+        <h1>Build a career you'll love </h1>
+        <div>
+            <div id="what">
+                <input id="what1" placeholder="Elementory School Teacher">
+                <input id="what2" placeholder="India">
+                <button>Search</button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="two">
+        <div>
+            <div>
+                <h1 id="Position"></h1>
+                <h1>-In India</h1>
+            </div>
+
+
+            <p>How much does an Elementary School Teacher make in India?</p>
+            <select id="select">
+                <option value="month">Per Month</option>
+            </select>
+
+            <div>
+                <div id="sal">
+                    <h1>Average base salary</h1>
+                    <p>1.4k salaries reported, updated at 22 August 2022</p>
+                </div>
+                <div id="sal2">
+                    <h1 id="avrg"></h1>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div id="cities">
+        <h1>Highest paying cities in India for Elementary School Teachers</h1>
+        <div>
+            <div id="citi1">
+                <div class="citi3">
+                    <div>
+                        <h2>Navi Mumbai</h2>
+                        <p>22 salaries Reported</p>
+                    </div>
+                    <div>
+                        <h2>21,469</h2>
+                        <p>Per Month</p>
+                    </div>
+                </div>
+                <div class="citi3">
+                    <div>
+                        <h2>New Delhi,Delhi</h2>
+                        <p>22 salaries Reported</p>
+                    </div>
+                    <div>
+                        <h2>19,456</h2>
+                        <p>Per Month</p>
+                    </div>
+                </div>
+                <div class="citi3">
+                    <div>
+                        <h2>Hyderabad,Telangana</h2>
+                        <p>22 salaries Reported</p>
+                    </div>
+                    <div>
+                        <h2>18,501</h2>
+                        <p>Per Month</p>
+                    </div>
+                </div>
+                <div class="citi3">
+                    <div>
+                        <h2>Bengaluru,Karnataka</h2>
+                        <p>22 salaries Reported</p>
+                    </div>
+                    <div>
+                        <h2>18,284</h2>
+                        <p>Per Month</p>
+                    </div>
+                </div>
+            </div>
+            <div id="citi2">
+                <div class="citi4">
+                    <div>
+                        <h2>Noida,Uttarpradesh</h2>
+                        <p>22 salaries Reported</p>
+                    </div>
+                    <div>
+                        <h2>17,723</h2>
+                        <p>Per Month</p>
+                    </div>
+                </div>
+                <div class="citi4">
+                    <div>
+                        <h2>Mumbai,Maharshatra</h2>
+                        <p>22 salaries Reported</p>
+                    </div>
+                    <div>
+                        <h2>17,338</h2>
+                        <p>Per Month</p>
+                    </div>
+                </div>
+                <div class="citi4">
+                    <div>
+                        <h2>Thane,Maharshatra</h2>
+                        <p>22 salaries Reported</p>
+                    </div>
+                    <div>
+                        <h2>16,998</h2>
+                        <p>Per Month</p>
+                    </div>
+                </div>
+                <div class="citi4">
+                    <div>
+                        <h2>Kalkata,West Brngal</h2>
+                        <p>22 salaries Reported</p>
+                    </div>
+                    <div>
+                        <h2>16.358</h2>
+                        <p>Per Month</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <h1 id="tech">How much do similar professions get paid in India?</h1>
+    <div id="similar1">
+        <div class="tech">
+            <h2>Teacher</h2>
+            <p>4151 openings</p>
+            <h2>Average salary inIndia</h2>
+            <h1>₹19,461</h1>
+        </div>
+
+        <div class="tech">
+            <h2> SchoolTeacher</h2>
+            <p>4151 openings</p>
+            <h2>Average salary inIndia</h2>
+            <h1>₹18,661</h1>
+
+        </div>
+        <div class="tech">
+            <h2>High School Teacher</h2>
+            <p>4151 openings</p>
+            <h2>Average salary inIndia</h2>
+            <h1>₹23,461</h1>
+        </div>
+        <div class="tech">
+            <h2> Pre school Teacher</h2>
+            <p>4151 openings</p>
+            <h2>Average salary inIndia</h2>
+            <h1>₹14,361</h1>
+        </div>
+        <div class="tech">
+            <h2>Mathematical Teacher</h2>
+            <p>4151 openings</p>
+            <h2>Average salary inIndia</h2>
+            <h1>₹19,461</h1>
+        </div>
+        <div class="tech">
+            <h2>Substiute Teacher</h2>
+            <p>4151 openings</p>
+            <h2>Average salary inIndia</h2>
+            <h1>₹20,461</h1>
+        </div>
+
+
+    </div>
+
+    <div id="help">
+        <div id="help1">
+            <h1>Was this page helpful?</h1>
+        </div>
+
+        <div id="help2">
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgZmlsbD0iIzI1NTdBNyIgc3Ryb2tlPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMjQgMjVjMC0zLjMxNC0zLjEzNC02LTctNnMtNyAyLjY4Ni03IDZoMTR6Ii8+PGNpcmNsZSBjeD0iMTEiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxjaXJjbGUgY3g9IjI0IiBjeT0iMTQiIHI9IjMiIGZpbGw9IiNGRkYiLz48L2c+PC9zdmc+"
+                    alt="error">
+            </div>
+
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgZmlsbD0iIzI1NTdBNyIgc3Ryb2tlPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjE0IiByPSIzIiBmaWxsPSIjRkZGIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMjMuNSAyNS41ODVDMjIuMjk1IDIzLjQ4IDE5Ljk4MiAyMiAxNy4zOCAyMmE2Ljk5OSA2Ljk5OSAwIDAwLTYuMTc1IDMuNzAyIi8+PC9nPjwvc3ZnPg=="
+                    alt="error">
+            </div>
+
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgc3Ryb2tlPSIjMjU1N0E3IiBmaWxsPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjE0IiByPSIzIiBmaWxsPSIjRkZGIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTEgMjQuNWgxMiIvPjwvZz48L3N2Zz4="
+                    alt="error">
+            </div>
+
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgc3Ryb2tlPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiIGZpbGw9IiMyNTU3QTciLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjE0IiByPSIzIiBmaWxsPSIjRkZGIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxwYXRoIHN0cm9rZT0iI0ZGRiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMTEgMjIuMTE3YzEuMjA3IDIuMTA1IDMuNTIgMy41ODUgNi4xMiAzLjU4NUE2Ljk5OSA2Ljk5OSAwIDAwMjMuMjk2IDIyIi8+PC9nPjwvc3ZnPg=="
+                    alt="error">
+            </div>
+
+            <div>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNCIgaGVpZ2h0PSIzNCI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj48Y2lyY2xlIGN4PSIxNyIgY3k9IjE3IiByPSIxNiIgc3Ryb2tlPSIjMjU1N0E3IiBmaWxsPSIjMjU1N0E3IiBzdHJva2Utd2lkdGg9IjIiLz48Y2lyY2xlIGN4PSIxMSIgY3k9IjE0IiByPSIzIiBmaWxsPSIjRkZGIi8+PGNpcmNsZSBjeD0iMjQiIGN5PSIxNCIgcj0iMyIgZmlsbD0iI0ZGRiIvPjxwYXRoIGZpbGw9IiNGRkYiIGQ9Ik0xMCAyMGMwIDMuMzE0IDMuMTM0IDYgNyA2czctMi42ODYgNy02SDEweiIvPjwvZz48L3N2Zz4="
+                    alt="error">
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="freq">
+        <h1>Frequently searched careers</h1>
+        <div class="freq1">
+            <p>Security Guard</p>
+            <p>Software Engineer</p>
+            <p>Accountant</p>
+            <p>Data Entry Clerk</p>
+            <p>Driver</p>
+            <p>Teacher</p>
+            <p>Laboratory Technician</p>
+            <p>Pharmacist</p>
+            <p>High School Teacher</p>
+            <p>Graphic Designer</p>
+            <p>Civil Engineer</p>
+            <p>Computer Operator</p>
+        </div>
+        <div class="freq1">
+            <p>Full Stack Developer</p>
+            <p>Physiotherapist</p>
+            <p>Back Office Executive</p>
+            <p>Assistant Professor</p>
+            <p>CNC Operator</p>
+            <p>Radiologist</p>
+            <p>Medical Representative</p>
+            <p>Engineer</p>
+            <p>Computer Engineer</p>
+            <p>Counselor</p>
+            <p>Electrician</p>
+            <p>Veterinarian</p>
+        </div>
+        <div class="freq1">
+            <p>Data Analyst</p>
+            <p>Web Developer</p>
+            <p>Collector</p>
+            <p>Office Assistant</p>
+            <p>Police Officer</p>
+            <p>Flight Attendant</p>
+            <p>School Teacher</p>
+            <p>Medical Officer</p>
+            <p>Interior Designer</p>
+            <p>Elementary School Teacher</p>
+            <p>Python Developer</p>
+            <p>Housekeeper</p>
+        </div>
+    </div>
+
+    <div id="Footbar">
+
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script src="./scripts/salary2.js" type="module"></script>
