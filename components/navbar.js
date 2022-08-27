@@ -32,7 +32,7 @@ let signin_navbar = ()=>{
             <a onclick="signout()">sign out</a>
         </div>
     </div>
-    <p><a href="">Employers/Post jobs</a></p>
+    <p id="post_hover"><a href="">Employers/Post jobs</a></p>
     </div>`
 }
 
