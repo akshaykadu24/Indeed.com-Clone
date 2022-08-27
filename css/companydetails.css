@@ -1,0 +1,406 @@
+
+#head{
+    width: 960px;
+    height: 380px;
+    margin: auto;
+    display: block;
+}
+#background{
+    width:1100px;
+    margin-left: -70px;
+    height: 210px;
+}
+#background>img{
+    width: 100%;
+    height: 210px; 
+    border-radius: 12px;
+}
+
+#middle{
+    margin: auto;
+    width: 960px;
+}
+#brief{
+    display: flex;
+    justify-content: space-evenly;
+}
+#companyhead{
+    display: flex;
+    
+}
+#about>h4{
+    font-size: 16px;
+    color: #595959;
+    /* font-weight: 100; */
+    font-weight: normal;
+    line-height: 1.5;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+}
+#companyhead>div{
+    display: flex;
+    margin: 1.5px;
+    margin-left: 1.5px;
+}
+#companyhead>div>button{
+    width: 164px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    
+}
+#companyhead>div>button:first-child{
+    background-color: #2D2D2D;
+    color: #fff;
+
+}
+#companyhead>div:last-child{
+    margin-left : auto;
+    align-items: center;
+    width: 400px;
+}
+#companyhead>div>div>img{
+    margin-top: 16px;
+    width: 64px;
+    height: 64px;
+    border-radius:8px;
+}
+#companyhead>div>div:last-child{
+    margin-left: 16px;
+   
+    line-height:0cm;
+    width: auto;
+}
+#companyhead>div>div:last-child>h3{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 20px;
+    margin-top: 38px;
+    font-weight: 700;
+    color: #2D2D2D;
+}
+#companyhead>div>div:last-child>h5{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 12px;
+    color: #595959;
+    font-weight: 400;
+    text-decoration: underline;
+}
+#compnavbar{
+    display: flex;
+    margin-top  : 56px;
+    justify-content: space-around;
+    
+}
+#compnavbar>div>button{
+    border: none;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 14px;
+    color: #2D2D2D;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+h3{
+    margin-top: 0px;
+}
+#middle{
+    margin-bottom: 50px;
+}
+#middle>h2{
+    font-weight: 700;
+    font-family: "Noto Sans","Helvetica Neue","Helvetica","Arial","Liberation Sans","Roboto","Noto",sans-serif;
+    font-size: 28px;
+    color: #2D2D2D;
+}
+#jobs{
+    height: 340px;
+    width: 1100px;
+    margin-left: -70px;
+    border-radius: 12px;
+    background-color: #f3f2f1;
+    display: flex;
+}
+jobs>div{
+    border: 1px solid blue;
+}
+#insights{
+    display: flex;
+    width: 960px;
+    height: 130px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+#insights>div{
+    padding-top: 30px;
+    width: 304px;
+    height: 130px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: #2D2D2D;
+    font-weight: 100;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    /* font-weight: inherit; */
+    border: 1px solid #d4d2d0;
+    border-radius: 12px;
+}
+#insights>div>img{
+    width: 32px;
+    height: 32px;
+}
+
+#location{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+    margin-bottom: 20px;
+}
+#sil{
+    color: #2D2D2D;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    /* font-weight: inherit; */
+}
+#location>div{
+    box-shadow: 0 0.125rem 0.25rem rgb(45 45 45 / 12%), 0 0.0625rem 0.1875rem rgb(45 45 45 / 16%), 0 0 0.125rem rgb(45 45 45 / 20%);
+    text-align: center;
+    color: #2D2D2D;
+    font-size: 21px;
+    font-weight: inherit;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    height: 75px;
+    border-radius: 8px;
+
+}
+#sujjest{
+    display: flex;
+    width: 960px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 10px;
+}
+#jobs>div{
+    box-shadow: 0 0.125rem 0.25rem rgb(45 45 45 / 12%), 0 0.0625rem 0.1875rem rgb(45 45 45 / 16%), 0 0 0.125rem rgb(45 45 45 / 20%);
+    background-color: #fff;
+    border: 1px solid #d4d2d0;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-left: 10px;
+    margin-right: 13px;
+    width: 236px;
+    height: 300px;
+    display: block;
+    margin: auto;
+
+}
+#jobs>div>div:first-child>h3{
+    margin-top: 10px;
+    color: #2D2D2D;
+    font-size: 17px;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+}
+#jobs>div>div:first-child>h5{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 12px;
+    color: #595959;
+}
+#jobs>div>div:first-child>h6{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 12px;
+    color: #595959;
+}
+#salrol{
+    display: flex;
+}
+#salrol>h2{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    color: #2D2D2D;
+    font-size: 20px;
+    font-weight: 700;
+    margin-right: 150px;
+}
+#salaries{
+    display: flex;
+    margin: auto;
+}
+#salaries>div{
+    display: block;
+    margin-right: 100px;
+}
+#salaries>div>div>div{
+    display: flex;
+    
+}
+
+#salaries>div>div>h3{
+    margin-top: 10px;
+    color: #2D2D2D;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    margin-bottom: 7px;
+}
+#salaries>div>div>div>h3{
+    color: #2D2D2D;
+    font-size: 16px;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+
+}
+#salaries>div>div>div>h5{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #595959;
+    margin-top: 3px;
+    margin-left: 8px;
+}
+
+#sujjest>div{
+    box-shadow: 0 0.125rem 0.25rem rgb(45 45 45 / 12%), 0 0.0625rem 0.1875rem rgb(45 45 45 / 16%), 0 0 0.125rem rgb(45 45 45 / 20%);
+    background-color: #fff;
+    border: 1px solid #d4d2d0;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding-left: 5px;
+    margin-right: 13px;
+    width: 236px;
+    height: 300px;
+    display: block;
+}
+#sujjest>div>div:first-child>h3{
+    margin-top: 10px;
+    color: #2D2D2D;
+    font-size: 17px;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+}
+#sujjest>div>div:first-child>h5{
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    font-size: 12px;
+    color: #595959;
+}
+#jobs>div>div:first-child{
+    height: 64%;
+    
+}
+#sujjest>div>div:first-child{
+    height: 64%;
+    
+}
+#sujjest>div>div:first-child>img{
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+
+}
+#sujjest>div>div:last-child{
+    align-items: baseline;
+}
+#jobs>div>div:last-child>button{
+    align-items: center;
+    text-align: center;
+    width: 170px;
+    height: 40px;
+    margin-left:25px;
+    color: #2557A7;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    background-color:#ffff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+#sujjest>div>div:last-child>button{
+    align-items: center;
+    text-align: center;
+    width: 170px;
+    height: 40px;
+    margin-left:25px;
+    color: #2557A7;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    background-color:#ffff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+
+#endpt{
+    display: flex;
+    text-align: center;
+}
+#endpt>h3{
+    margin-top: 23px;
+    margin-left: 7px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    color: #595959;
+}
+#endpt>h2{
+    margin-top: 22px;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    color: #2557A7;
+}
+#hr{
+    border:none;
+    border-top:1px solid grey;
+    height:1px;
+    width:1100px;
+    margin-left: -70px;
+    margin-top: 4px;  
+    
+    }
+
+.ceo{
+    display: flex;
+}
+.ceo>img{
+    width: 110px;
+    height: 130px;
+}
+.ceo>h3{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    color: #2D2D2D;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.divm{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Noto Sans,Helvetica Neue,Helvetica,Arial,Liberation Sans,Roboto,Noto,sans-serif;
+    color: #2D2D2D;
+    margin-left: 300px;
+}
+.picdiv{
+    margin-top: 80px;
+    width: 600px;
+    height: 300px;
+    margin-left: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.picdiv>img{
+    width: 290px;
+    height: 250px;
+    border-radius: 8px;
+}
+
+.midchange{
+    height: 1000px;
+}
