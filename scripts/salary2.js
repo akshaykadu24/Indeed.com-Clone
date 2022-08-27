@@ -1,6 +1,12 @@
 
-import { navbar } from "../components/navbar.js";
-document.getElementById("navbar").innerHTML=navbar();
+import {navbar,signin_navbar} from "../components/navbar.js"
+let nav = document.getElementById('navbar')
+let data=JSON.parse(localStorage.getItem('signinsatus'))
+if(data ===true){
+  nav.innerHTML = signin_navbar()
+}else{
+  nav.innerHTML = navbar();
+}
 
 
 import {footbar} from "../components/footbar.js"
