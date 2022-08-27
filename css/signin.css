@@ -149,3 +149,7 @@ body {
 .tags > a:hover {
   text-decoration: underline;
 }
+#sign_hover{
+    padding-bottom: 40px;
+    border-bottom: 4px solid blue;
+  }
