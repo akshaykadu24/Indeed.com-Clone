@@ -14,6 +14,7 @@ button{
     padding: 10px 20px;
     font-size: large;
     border-radius: 6px;
+    cursor: pointer;
 
 }
 #main{
@@ -100,6 +101,14 @@ input{
     margin: 0px;
     padding: 13px 0px 13px 5px;
 } */
+#ind1 {
+    padding-bottom: 40px;
+    border-bottom: 4px solid blue;
+  }
+#jobs_container>div:hover{
+    background-color:gainsboro;
+    cursor: pointer;
+}
 
 @media only screen and (min-width: 0px) and (max-width: 900px) {
     #main{
