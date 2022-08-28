@@ -14,3 +14,8 @@ function myFunction() {
     localStorage.setItem('signinsatus',JSON.stringify(false));
     window.location.href="index.html";
   }
+
+  let indeed= ()=>{
+    window.location.href = 'index.html'
+  }
+  

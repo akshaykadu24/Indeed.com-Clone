@@ -1,11 +1,15 @@
-
+#navbar{
+    margin-top: -20px;
+}
 #head{
+    
     width: 960px;
     height: 380px;
     margin: auto;
     display: block;
 }
 #background{
+    margin-top:10px ;
     width:1100px;
     margin-left: -70px;
     height: 210px;
@@ -404,3 +408,7 @@ jobs>div{
 .midchange{
     height: 1000px;
 }
+#ind2 {
+    padding-bottom: 40px;
+    border-bottom: 4px solid blue;
+  }

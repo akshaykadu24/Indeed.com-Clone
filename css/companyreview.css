@@ -5,6 +5,10 @@
     margin: auto;
     margin-top: 75px;
 }
+#ind2 {
+    padding-bottom: 40px;
+    border-bottom: 4px solid blue;
+  }
 #main>h2{
     margin-top: 50px;
 }

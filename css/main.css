@@ -6,6 +6,7 @@ body{
     padding: 20px;
     border-radius: 15px;
     width: 300%;
+    height: fit-content;
 }
 button{
     background-color: rgb(37,87,167);
@@ -16,6 +17,9 @@ button{
     border-radius: 6px;
     cursor: pointer;
 
+}
+button:hover{
+    background-color: blue;
 }
 #main{
     width: 65%;

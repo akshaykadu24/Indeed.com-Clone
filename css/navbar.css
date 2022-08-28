@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     height: 60px;
+   
     padding: 0px 3% 0px 3%;
     /* border: 1px solid rgb(171, 168, 168); */
     
@@ -74,7 +75,7 @@ a{
 
 /* adding navbar changes dropdown profile */
 
-.dropdown-content {
+/* .dropdown-content {
     display: none;
     position: absolute;
     background-color: #F9F9F9;
@@ -96,7 +97,43 @@ a{
   .show {
     display: block;
   }
-  #div2 > a:hover {
+   */
+   .dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    background-color: white;
+    min-width: 200px;
+    min-height: 200px;
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+  }
+  .dropdown-content a {
+    float: none;
+    color: blue;
+    gap: 20px;
+    font-size: 20px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    border: 1px solid blue;
+    border-radius: 10px;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .show {
+    display: block;
+  }
+
+
+   #div2 > a:hover {
       padding-bottom: 40px;
       border-bottom: 4px solid blue;
     }

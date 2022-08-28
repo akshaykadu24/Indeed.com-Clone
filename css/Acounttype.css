@@ -1,15 +1,18 @@
-body {
-  margin: 0px;
-}
+
 #main {
   display: grid;
   justify-content: center;
   align-items: center;
   justify-items: center;
+  border: 1ps solid blue;
   background-color: #f3f2f1;
   height: 100%;
-  margin-top: -140px;
-  padding: 100px;
+  margin-top: 0px;
+ 
+}
+body{
+  margin: 0px;
+
 }
 #inner {
   width: 450px;
