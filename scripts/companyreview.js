@@ -148,7 +148,7 @@ function companydetail(data){
 localStorage.setItem("scomp",JSON.stringify(data));
 // let compdata=JSON.parse(localStorage.getItem("comp"))||[];
 
-window.location.href="/vengeful-anger-1431/companydetails.html";
+window.location.href="companydetails.html";
 }
 
 
