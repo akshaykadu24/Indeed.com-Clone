@@ -18,11 +18,12 @@ let getdata = async()=>{
     console.log(data)
     renderDom(data[0])
 }
-
+let el;
 let append = (data)=>{
     let jobs_container = document.getElementById('jobs_container')
     jobs_container.innerHTML = null
     data.forEach((elem)=>{
+        el=elem
         let atitle = document.createElement('h2')
         atitle.innerText = elem.Title
         let acompany = document.createElement('p')
@@ -65,7 +66,13 @@ let renderDom = ({Title,company,city,JobType,rating,Description,preferd_skills, 
         let atitle = document.createElement('h2')
         atitle.innerText = Title
         let acompany = document.createElement('a')
-        acompany.href = 'compoany.html'
+        acompany.style.color='blue'
+        acompany.style.cursor="pointer";
+        
+        acompany.onclick=()=>{
+            localStorage.setItem('scomp',JSON.stringify(el))
+            window.location.href = 'companydetails.html'
+        }
         acompany.innerText = company
         let arating = document.createElement('h4')
         arating.innerText = rating
@@ -91,6 +98,7 @@ let renderDom = ({Title,company,city,JobType,rating,Description,preferd_skills, 
         let button = document.createElement('button')
         button.innerText = 'Apply now'
         button.addEventListener('click',()=>{
+            
             buttonchange(button)
         })
         let job_detail = document.createElement('h2')
@@ -131,11 +139,15 @@ let renderDom = ({Title,company,city,JobType,rating,Description,preferd_skills, 
 }
 
 let buttonchange = (button)=>{
-    if(button.innerText == 'Apply now'){
+    
+
+    if(data ===true && button.innerText == 'Apply now'){
+
         button.innerText = 'Applied';
         button.style.backgroundColor = 'green';
         
     }else{
+        alert("You are not Logedin")
         button.innerText = 'Apply now'
         button.style.backgroundColor = 'rgb(37,87,167)';
 

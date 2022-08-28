@@ -163,14 +163,13 @@ let company=()=>{
     
 }
 let  view=(data)=>{
-localStorage.setItem("comp",JSON.stringify(data));
-let compdata=JSON.parse(localStorage.getItem("comp"))||[];
-console.log(compdata);
-window.location.href="/vengeful-anger-1431/companydetails.html";
+localStorage.setItem("scomp",JSON.stringify(data));
+
+window.location.href="companydetails.html";
 }
 let jobb=document.getElementById("jobb");
 jobb.addEventListener("click",()=>{
-    window.location.href="/vengeful-anger-1431/index.html";
+    window.location.href="index.html";
 })
 
 
@@ -182,7 +181,7 @@ pics.addEventListener("click",()=>{
     let midd=document.getElementById("mid");
     midd.innerHTML=null;
     midd.setAttribute("class","midchange");
-    let compdata1=JSON.parse(localStorage.getItem("comp"));
+    let compdata1=JSON.parse(localStorage.getItem("scomp"));
 
     let title=document.createElement("h2");
     title.innerText=`${compdata1.company} Photos`;
@@ -204,5 +203,5 @@ pics.addEventListener("click",()=>{
 })
 let salu=document.getElementById("salu");
 salu.addEventListener("click",()=>{
-    window.location.href="/vengeful-anger-1431/salary.html"
+    window.location.href="salary.html"
 })
