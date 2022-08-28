@@ -134,6 +134,7 @@ let buttonchange = (button)=>{
     if(button.innerText == 'Apply now'){
         button.innerText = 'Applied';
         button.style.backgroundColor = 'green';
+        
     }else{
         button.innerText = 'Apply now'
         button.style.backgroundColor = 'rgb(37,87,167)';
@@ -144,13 +145,23 @@ let buttonchange = (button)=>{
 let submit = document.getElementById('submit')
 submit.addEventListener('click',()=>{
     submitting()
+
+    
 })
 
 let submitting = async()=>{
     let t_search = document.getElementById('title').value
     let c_search = document.getElementById('loca').value
-console.log(t_search,c_search)
-    let res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?Title=${t_search}&city=${c_search}`)
+    let res;
+    if(t_search==""){
+        res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?city=${c_search}`)
+    }else if(c_search==""){
+        res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?Title=${t_search}`)
+    }else{
+        res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?Title=${t_search}&city=${c_search}`)
+
+    }
+    console.log(t_search,c_search)
     let data = await res.json()
     append(data)
     console.log(data)

@@ -14,15 +14,18 @@ window.addEventListener("load",()=>{
     company();
 })
 let snap=document.getElementById("snap");
+snap.style.borderBottom = '4px solid gray'
 snap.addEventListener("click",()=>{
+    
     window.location.reload();
+    
 })
 let company=()=>{
     let compdata2=JSON.parse(localStorage.getItem("comp2"));
-    let compdata1=JSON.parse(localStorage.getItem("comp"));
+    // let compdata1=JSON.parse(localStorage.getItem("comp"));
     let scompdata=JSON.parse(localStorage.getItem("scomp"));
-    console.log(compdata1);
-    let compdata=(compdata2||compdata1||scompdata);
+    // console.log(compdata1);
+    let compdata=(scompdata);
     let abt=document.getElementById("about");
     let background=document.getElementById("background");
     let back=document.createElement("img");
@@ -173,7 +176,9 @@ jobb.addEventListener("click",()=>{
 
 let pics=document.getElementById("pics");
 pics.addEventListener("click",()=>{
-   
+   pics.style.borderBottom = '4px solid gray'
+   snap.style.borderBottom = 'none'
+
     let midd=document.getElementById("mid");
     midd.innerHTML=null;
     midd.setAttribute("class","midchange");

@@ -92,7 +92,7 @@ let searchcomp=(data)=>{
     let scompdata=JSON.parse(localStorage.getItem("scomp"));
     localStorage.setItem("scomp",JSON.stringify(data));
     console.log(scompdata);
-    window.location.href="/companydetails.html";
+    window.location.href="companydetails.html";
 
 }
 let divx=document.createElement("div");
@@ -145,9 +145,9 @@ let rdom=(data)=>{
 
 
 function companydetail(data){
-localStorage.setItem("comp",JSON.stringify(data));
-let compdata=JSON.parse(localStorage.getItem("comp"))||[];
-console.log(compdata);
+localStorage.setItem("scomp",JSON.stringify(data));
+// let compdata=JSON.parse(localStorage.getItem("comp"))||[];
+
 window.location.href="/vengeful-anger-1431/companydetails.html";
 }
 
