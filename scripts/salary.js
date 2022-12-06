@@ -1,4 +1,4 @@
-// "https://pacific-refuge-88537.herokuapp.com/api/Indded"
+// "https://indeed-data.vercel.app/Indded"
 
 // Use deployed URL.
 // window.addEventListener("load", () => {
@@ -18,7 +18,7 @@ import {footbar} from "../components/footbar.js"
 document.getElementById("Footbar").innerHTML=footbar();
 
 let getData = async () => {
-    let res = await fetch("https://pacific-refuge-88537.herokuapp.com/api/Indded");
+    let res = await fetch("https://indeed-data.vercel.app/Indded");
     let data = await res.json();
     renderDom(data);
     console.log(data);

@@ -23,7 +23,7 @@ sub.onclick = () => {
   }
 };
 
-let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
+let url = "https://indeed-data.vercel.app/signup";
 
 let checkData = async (data) => {
   let res = await fetch(url);
