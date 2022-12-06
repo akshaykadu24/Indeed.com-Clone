@@ -32,8 +32,8 @@ let url = "https://indeed-data.vercel.app/signup";
 
 let adddata = async (data) => {
   
- let res =  await fetch(url);
-  res =  await res.json();
+ let res = await fetch(url);
+  res = await res.json();
   console.log(res)
   let flag = true;
   res.forEach((el) => {
@@ -42,7 +42,7 @@ let adddata = async (data) => {
     }
   });
   if (flag === true) {
-    let res =  await fetch(url, {
+    let res = await fetch(url, {
       method: "POST",
       body: JSON.stringify(data),
       headers: {

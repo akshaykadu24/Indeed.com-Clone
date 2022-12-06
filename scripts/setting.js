@@ -14,8 +14,8 @@ let url = "https://indeed-data.vercel.app/signup";
      }
 
   let getdata = async () => {
-    let res =  await fetch(`https://indeed-data.vercel.app/signup/${signinid}`);
-    res =  await res.json();
+    let res = await fetch(`https://indeed-data.vercel.app/signup/${signinid}`);
+    res = await res.json();
     
   
     append(res);
@@ -47,8 +47,8 @@ let append =(data)=>{
     email.onclick=async()=>{
         let datamail=window.prompt('enter new email');
        let flag=false;
-        res =  await fetch(url);
-        res= await res.json();
+        res = await fetch(url);
+        res=await res.json();
         res.forEach(el => {
           if(el.email==datamail){
             flag=true;
@@ -66,8 +66,8 @@ let append =(data)=>{
     pass.onclick=async()=>{
       let password=window.prompt('enter privious password');
       let newpassword;
-      res =  await fetch(`https://indeed-data.vercel.app/signup/${signinid}`);
-        res= await res.json();
+      res = await fetch(`https://indeed-data.vercel.app/signup/${signinid}`);
+        res=await res.json();
         if(res.password==password){
           newpassword=window.prompt("enter new password");
           passchange=true;
@@ -112,7 +112,7 @@ let append =(data)=>{
     }else if(num==3){
       data = { mobile: name };
     }
-    let res =  await fetch(
+    let res = await fetch(
       `https://indeed-data.vercel.app/signup/${signinid}`,
       {
         method: "PATCH",

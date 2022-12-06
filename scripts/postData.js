@@ -44,10 +44,10 @@ document.getElementById("Footbar").innerHTML=footbar();
     if (data !== true) {
         alert("You are not sign In");
     }else{
-       let res =  await fetch(
+       let res = await fetch(
             `https://indeed-data.vercel.app/signup/${signinid}`
           );
-          res =  await res.json();
+          res = await res.json();
           
         
          if (res.Athorised == "Employed") {

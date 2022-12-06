@@ -11,10 +11,10 @@ window.onload = () => {
   };
 
   let getdata = async () => {
-    let res =  await fetch(
+    let res = await fetch(
       `https://indeed-data.vercel.app/Indded`
     );
-    res =  await res.json();
+    res = await res.json();
    
     
     
@@ -42,13 +42,14 @@ window.onload = () => {
        
         
         updatedata(data)
-
+        alert('Data added succesfully')
+        window.location.href='index.html';
     }
   }
   
   let updatedata = async (data) => {
    
-    let res =  await fetch(
+    let res = await fetch(
       `https://indeed-data.vercel.app/Indded`,
       {
         method: "POST",
@@ -58,7 +59,7 @@ window.onload = () => {
         },
       }
     );
-    res =  await res.json();
+    res = await res.json();
    
     
    console.log(res)
