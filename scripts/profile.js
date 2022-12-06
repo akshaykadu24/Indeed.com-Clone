@@ -14,10 +14,10 @@ window.onload = () => {
 };
 
 let getdata = async () => {
-  let res = await fetch(
+  let res =  await fetch(
     `https://indeed-data.vercel.app/signup/${signinid}`
   );
-  res = await res.json();
+  res =  await res.json();
   if(res.jobinterest !==undefined){
       let div=document.getElementById('lastprofilediv');
       let div2=document.getElementById('buildprofile');
@@ -77,7 +77,7 @@ savebutton.onclick=()=>{
 
 let updatedata = async (data) => {
  
-  let res = await fetch(
+  let res =  await fetch(
     `https://indeed-data.vercel.app/signup/${signinid}`,
     {
       method: "PATCH",

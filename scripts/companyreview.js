@@ -21,8 +21,8 @@ window.addEventListener("load",()=>{
 
 let companies=async()=>{
     
-let res=await fetch("https://indeed-data.vercel.app/Indded");
-let data= await res.json();
+let res= await fetch("https://indeed-data.vercel.app/Indded");
+let data=  await res.json();
  console.log(data);
  localStorage.setItem("data",JSON.stringify(data));
  let alldata=JSON.parse(localStorage.getItem("data"))||[];

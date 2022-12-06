@@ -21,8 +21,8 @@ let but1 = document.getElementById("job_seeker");
   let signinId = JSON.parse(localStorage.getItem("signinid"));
   let url = "https://indeed-data.vercel.app/signup";
   let getdata = async (name) => {
-    let res = await fetch(url);
-    res = await res.json();
+    let res =  await fetch(url);
+    res =  await res.json();
 
     updatedata(signinId, name);
   };
@@ -30,7 +30,7 @@ let but1 = document.getElementById("job_seeker");
   let updatedata = async (id, name) => {
     data = { Athorised: name };
 
-    let res = await fetch(
+    let res =  await fetch(
       `https://indeed-data.vercel.app/signup/${id}`,
       {
         method: "PATCH",
