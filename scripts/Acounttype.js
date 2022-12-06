@@ -19,7 +19,7 @@ let but1 = document.getElementById("job_seeker");
   };
 
   let signinId = JSON.parse(localStorage.getItem("signinid"));
-  let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
+  let url = "https://indeed-data.vercel.app/signup";
   let getdata = async (name) => {
     let res = await fetch(url);
     res = await res.json();
@@ -31,7 +31,7 @@ let but1 = document.getElementById("job_seeker");
     data = { Athorised: name };
 
     let res = await fetch(
-      `https://pacific-refuge-88537.herokuapp.com/api/signup/${id}`,
+      `https://indeed-data.vercel.app/signup/${id}`,
       {
         method: "PATCH",
         body: JSON.stringify(data),

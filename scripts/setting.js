@@ -6,7 +6,7 @@ if(data ===true){
 }else{
   nav.innerHTML = navbar();
 }
-let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
+let url = "https://indeed-data.vercel.app/signup";
      let signinid=JSON.parse(localStorage.getItem('signinid'));
     
      window.onload=()=>{
@@ -14,7 +14,7 @@ let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
      }
 
   let getdata = async () => {
-    let res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/signup/${signinid}`);
+    let res = await fetch(`https://indeed-data.vercel.app/signup/${signinid}`);
     res = await res.json();
     
   
@@ -66,7 +66,7 @@ let append =(data)=>{
     pass.onclick=async()=>{
       let password=window.prompt('enter privious password');
       let newpassword;
-      res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/signup/${signinid}`);
+      res = await fetch(`https://indeed-data.vercel.app/signup/${signinid}`);
         res=await res.json();
         if(res.password==password){
           newpassword=window.prompt("enter new password");
@@ -113,7 +113,7 @@ let append =(data)=>{
       data = { mobile: name };
     }
     let res = await fetch(
-      `https://pacific-refuge-88537.herokuapp.com/api/signup/${signinid}`,
+      `https://indeed-data.vercel.app/signup/${signinid}`,
       {
         method: "PATCH",
         body: JSON.stringify(data),

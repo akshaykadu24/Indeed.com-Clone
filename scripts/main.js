@@ -7,12 +7,15 @@ if(data ===true){
   nav.innerHTML = navbar();
 }
 
+import {footbar} from "../components/footbar.js"
+document.getElementById("Footbar").innerHTML=footbar();
+
 window.addEventListener('load',()=>{
     getdata()
 })
 
 let getdata = async()=>{
-    let res = await fetch('https://pacific-refuge-88537.herokuapp.com/api/Indded')
+    let res = await fetch('https://indeed-data.vercel.app/Indded')
     let data = await res.json()
     append(data)
     console.log(data)
@@ -166,11 +169,11 @@ let submitting = async()=>{
     let c_search = document.getElementById('loca').value
     let res;
     if(t_search==""){
-        res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?city=${c_search}`)
+        res = await fetch(`https://indeed-data.vercel.app/Indded?city=${c_search}`)
     }else if(c_search==""){
-        res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?Title=${t_search}`)
+        res = await fetch(`https://indeed-data.vercel.app/Indded?Title=${t_search}`)
     }else{
-        res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?Title=${t_search}&city=${c_search}`)
+        res = await fetch(`https://indeed-data.vercel.app/Indded?Title=${t_search}&city=${c_search}`)
 
     }
     console.log(t_search,c_search)
@@ -217,7 +220,7 @@ title.addEventListener('input',()=>{
 let inp_title = async()=>{
     let query = title.value
     console.log(query)
-    let res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?q=${query}`)
+    let res = await fetch(`https://indeed-data.vercel.app/Indded?q=${query}`)
     let data = await res.json()
     console.log(data)
     debounce_append(data)
@@ -230,7 +233,7 @@ city.addEventListener('input',()=>{
 let inp_city = async()=>{
     let query = city.value
     console.log(query)
-    let res = await fetch(`https://pacific-refuge-88537.herokuapp.com/api/Indded?q=${query}`)
+    let res = await fetch(`https://indeed-data.vercel.app/Indded?q=${query}`)
     let data = await res.json()
     console.log(data)
     debounce_append2(data)

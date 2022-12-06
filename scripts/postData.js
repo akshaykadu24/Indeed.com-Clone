@@ -2,6 +2,9 @@ let nav = document.getElementById("navbar");
   import { Post_navbar, Post_navbar2 } from "../components/component.js";
   let data = JSON.parse(localStorage.getItem("signinsatus"));
 
+  import {footbar} from "../components/footbar.js"
+document.getElementById("Footbar").innerHTML=footbar();
+
   if (data !== true) {
     nav.innerHTML = Post_navbar();
   } else {
@@ -32,7 +35,7 @@ let nav = document.getElementById("navbar");
     window.location.href = "postData.html";
   };
 
-  let url = "https://pacific-refuge-88537.herokuapp.com/api/signup";
+  let url = "https://indeed-data.vercel.app/signup";
   let signinid = JSON.parse(localStorage.getItem("signinid"));
 
   let button = document.getElementById("postbutton");
@@ -42,7 +45,7 @@ let nav = document.getElementById("navbar");
         alert("You are not sign In");
     }else{
        let res = await fetch(
-            `https://pacific-refuge-88537.herokuapp.com/api/signup/${signinid}`
+            `https://indeed-data.vercel.app/signup/${signinid}`
           );
           res = await res.json();
           

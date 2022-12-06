@@ -12,7 +12,7 @@ window.onload = () => {
 
   let getdata = async () => {
     let res = await fetch(
-      `https://pacific-refuge-88537.herokuapp.com/api/Indded`
+      `https://indeed-data.vercel.app/Indded`
     );
     res = await res.json();
    
@@ -49,7 +49,7 @@ window.onload = () => {
   let updatedata = async (data) => {
    
     let res = await fetch(
-      `https://pacific-refuge-88537.herokuapp.com/api/Indded`,
+      `https://indeed-data.vercel.app/Indded`,
       {
         method: "POST",
         body: JSON.stringify(data),
