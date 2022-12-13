@@ -67,13 +67,13 @@ On frontend terminal perform:
 
 
 #### Website Presentation :
-![rentomojo-webite](/images/indeed.png)
+![Indeed.com-webite](/images/indeed.png)
 
-![rentomojo-webite](/images/Screenshot%20(234).png)
+![Indeed.com-webite](/images/Screenshot%20(234).png)
 
-![rentomojo-webite](/images/Screenshot%20(232).png)
+![Indeed.com-webite](/images/Screenshot%20(232).png)
 
-![rentomojo-webite](/images/Screenshot%20(233).png)
+![Indeed.com-webite](/images/Screenshot%20(233).png)
 ## Thank you note
 Thank you all who is giving precious time to visit our little creative project which is made with lot of efforts.
 
