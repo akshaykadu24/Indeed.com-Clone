@@ -18,8 +18,8 @@ import {footbar} from "../components/footbar.js"
 document.getElementById("Footbar").innerHTML=footbar();
 
 let getData = async () => {
-    let res =  await fetch("https://indeed-data.vercel.app/Indded");
-    let data =  await res.json();
+    let res = await fetch("https://indeed-data.vercel.app/Indded");
+    let data = await res.json();
     renderDom(data);
     console.log(data);
 

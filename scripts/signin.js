@@ -26,8 +26,8 @@ sub.onclick = () => {
 let url = "https://indeed-data.vercel.app/signup";
 
 let checkData = async (data) => {
-  let res =  await fetch(url);
-  res =  await res.json();
+  let res = await fetch(url);
+  res = await res.json();
   let count = 0;
   res.forEach((el) => {
     if (el.email == data.email && el.password == data.password) {
