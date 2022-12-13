@@ -44,6 +44,7 @@ window.onload = () => {
         updatedata(data)
         alert('Data added succesfully')
         window.location.href='index.html';
+
     }
   }
   
